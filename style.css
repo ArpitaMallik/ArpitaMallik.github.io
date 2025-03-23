@@ -76,61 +76,18 @@ button{
     opacity:1;
 }
 
-
-@media only screen and (max-width: 800px){
-    .navbar{
-        margin-left: 680px;
-        margin-top: -70px;
-    }
+.navbar {
+    padding: 30px 0; /* Adjust the height */
+}
+.navbar-toggler {
+    border-color: white; /* Change border color */
 }
 
-@media only screen and (max-width: 800px){
-    img{
-        border: 7px solid rgb(16, 16, 16);
-        width:100%;
-        max-height:90%;
-        display: flex;
-        align-items: center;
-    }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
-@media only screen and (min-width: 800px){
-    .main{
-    padding: 50px;
-    margin-left: 150px;
-    }
-}
-
-@media only screen and (max-width: 219px){
-    .main{
-    padding: 50px;
-    margin-left: 150px;
-    }
-}
-
-@media only screen and (min-width: 800px){
-    .img-cont{
-        margin-right: -100px;
-    }
-}
-
-@media only screen and (max-width: 219px){
-    .img-cont{
-        margin-left: 100px;
-    }
-}
-
-
-.col-lg-5{
-    padding-left: 0;
-    padding-right: 0;
-    width: 620px;
-}
-
-/* .container{
-    margin-right: -10px;
-} */
 
 #hello{
     font-size: 75px;

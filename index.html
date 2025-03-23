@@ -28,52 +28,41 @@
 </head>
 <body class="main-content">
     <div class="banner">
-        /* Ensure navbar is fully visible on small screens */
-@media (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    /* Ensure the dropdown menu takes full width and looks good */
-    .navbar-collapse {
-        background: rgba(0, 0, 0, 0.95);
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    /* Adjust the brand name and navbar layout */
-    .col-sm-3, .col-sm-9 {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Reduce padding for the brand name on mobile */
-    h2 {
-        padding: 10px;
-        font-size: 1.8rem;
-    }
-
-    /* Ensure the toggle button aligns properly */
-    .navbar-toggler {
-        display: block;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-    }
-
-    /* Fix spacing issues when menu expands */
-    .navbar-nav .nav-item {
-        margin: 10px 0;
-    }
-}
+        <header class="sticky-top bg-dark">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-sm-3">
+                    <h2 style="font-weight: bolder; padding:18px; color:white;">Arpita Mallik</h2>
+                </div>
+                <div class="col-lg-5 col-sm-9">
+                    <nav class="navbar navbar-expand-lg navbar-dark p-3">
+                        
+                        <button class="navbar-toggler ms-auto" type="button"           
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav m-lg-auto text-center">
+                                <li class="nav-item"><a class="section nav-link" href="#about">ABOUT ME</a></li>
+                                <li class="nav-item"><a class="section edu nav-link" href="#edu">EDUCATION</a></li>
+                                <li class="nav-item"><a class="section project nav-link" href="#project">PROJECTS</a></li>
+                                <li class="nav-item"><a class="section skill nav-link" href="#skill">SKILLS</a></li>
+                                <li class="nav-item"><a class="section contact nav-link" href="#contact">CONTACT</a></li>
+                            </ul>
+                        </div>
+        
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
 
         
 
         <!-- MAIN -->
 
         <div class="container main mt-3">
-            <div class="row">
+            <div class="row" id="about">
                 <div class="img-cont col-lg-6">
                     <img style="width:70%;" class="rounded-circle mt-4" src="images\arpii.jpg">
                 </div>
@@ -115,7 +104,7 @@
 
 
          <!--SKILLS SECTION -->
-         <div class="aboutsection reveal">
+         <div class="aboutsection reveal" id="skill">
             <h2 class="headline">Skills</h2>
             <div class="container">
                 <div class="skills-section">
@@ -236,7 +225,7 @@
 
         <!-- EDUCATION -->
 
-        <div class="edu-container reveal" style="margin-top: 80px;">
+        <div class="edu-container reveal" style="margin-top: 80px;" id="edu">
             <div class="row">
                 <h2 class="headline">Education</h2>
                 <div class="edu-contents">
@@ -264,7 +253,7 @@
 
         <!-- PROJECTS SECTION -->
 
-        <div class="container my-5">
+        <div class="container my-5" id="project">
             <h2 class="headline">My Projects</h2>
             <div class="row">
                 <!-- Project 1 -->
@@ -354,7 +343,7 @@
 
 
          <!-- CONTACT -->
-         <div class="contactus reveal">
+         <div class="contactus reveal" id="contact">
             <h3 class="headline">Get In Touch</h3>
             <div class="cont-box">
                 <!-- Form Section -->

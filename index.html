@@ -73,7 +73,7 @@
                         <p style="color: rgb(254, 250, 250); font-size: 17px;">A Computer Science and Engineering undergraduate at Chittagong University of Engineering and Technology, Chittagong.</p>
                         <a href="#demo" data-bs-toggle="collapse" style="color: white; text-decoration: none; font-weight: bolder; font-size: 20px;">Learn More</a>
                         <div id="demo" class="collapse">
-                            <p style="color:white; font-size: 17px;">My current focus is on deepening my skills in machine learning, deep learning, and natural language processing (NLP), areas that I have a strong interest in. I’m also working on my thesis in emotion classification in Bengali. <br>
+                            <p style="color:white; font-size: 17px;">My current focus is on deepening my skills in machine learning, deep learning, and natural language processing (NLP), areas that I have a strong interest in.<br>
 
                             Alongside my academic work, I serve as a Tech Solutions Architect at Greenlead, where I manage and maintain their website and solve various tech-related challenges. I’m passionate about using technology to support climate change awareness initiatives and always eager to take on new challenges.</p>
                         </div><br>
@@ -230,115 +230,231 @@
             <div class="row">
                 <h2 class="headline">Education</h2>
                 <div class="edu-contents">
-    
                     <div class="box">
-                        <h4 >2011-2018</h4>
-                        <h3>Secondary School Degree</h3>
-                        <p>Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
+                        <h4>2021-2026</h4>
+                        <h3>Bachelor of Science in Computer Science and Engineering</h3>
+                        <p>Chittagong University of Engineering and Technology, Chittagong</p>
+                        <p style="font-size: 14px; color: #eeeded;">CGPA: 3.55 (out of 4.00)</p>
                     </div>
                     <div class="box">
                         <h4>2018-2020</h4>
-                        <h3>Higher Secondary School Degree </h3>
+                        <h3>Higher Secondary Education</h3>
                         <p>Cumilla Victoria College, Cumilla</p>
+                        <p style="font-size: 14px; color: #ffffff;">GPA: 5.00 (out of 5.00)</p>
                     </div>
                     <div class="box">
-                        <h4>2021-2026</h4>
-                        <h3>Bachelor's Degree in Computer Science and Engineering</h3>
-                        <p>Chittagong University of Engineering and Technology, Chittagong</p>
+                        <h4>2011-2018</h4>
+                        <h3>Secondary Education</h3>
+                        <p>Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
+                        <p style="font-size: 14px; color: #ffffff;">GPA: 5.00 (out of 5.00)</p>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- EDUCATION ENDS -->
 
-        <!-- PROJECTS SECTION -->
+       <!-- PROJECTS SECTION -->
+<div class="container my-5" id="project">
+    <h2 class="headline">My Projects</h2>
+    <div class="row">
 
-        <div class="container my-5" id="project">
-            <h2 class="headline">My Projects</h2>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <h4 class="project-title">Cyberbullying Detection using BERT-Based Sequence Classification</h4>
-                        <p class="project-desc">
-                            Built a cyberbullying detection model using BERT for text classification.
-                            <span class="more-text">It identifies whether a message is bullying or not. The model was deployed as a Flask web app for real-time predictions.</span>
-                            <button class="more-btn">More...</button>
-                        </p>
-                        <p class="project-tools"><strong>Tools Used:</strong> Python, Flask, HTML5, CSS</p>
-                        <div class="project-links">
-                            <button class="btn live-btn btn-primary open-gallery" data-images="images\cyber bullying detection app.png">Gallery</button>
-                            <a href="https://github.com/ArpitaMallik/Cyber-Bullying-Detection-App" class="btn btn-outline-secondary git-btn">GitHub</a>
-                        </div>
-                    </div>
+        <!-- Project 1 -->
+         <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">ChatPDF: RAG-based PDF Chatbot</h4>
+                <p class="project-desc">
+                    Developed a chatbot capable of answering questions by retrieving relevant information from uploaded PDFs.
+                    <span class="more-text">Uses Retrieval-Augmented Generation (RAG) with vector search for context-aware QA.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Python, Streamlit, FastAPI, FAISS, Google Generative AI</p>
+                <div class="project-links">
+                    <a href="https://chatpdf-using-langchain-ch9am4nnyzryzajc9v6vg2.streamlit.app/" class="btn live-btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/ArpitaMallik/ChatPDF-Conversational-PDF-Assistant" class="btn btn-outline-secondary git-btn">GitHub</a>
                 </div>
-    
-                <!-- Project 2 -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <h4 class="project-title">Movie Recommendation App</h4>
-                        <p class="project-desc">
-                            A content-based movie recommendation system using machine learning and Streamlit.
-                            <span class="more-text">This project provides personalized movie suggestions and integrates with The Movie Database (TMDb) API to fetch and display movie posters and details.</span>
-                            <button class="more-btn">More...</button>
-                        </p>
-                        <p class="project-tools"><strong>Tools Used:</strong> Python, Streamlit </p>
-                        <div class="project-links">
-                            <a href="https://movie-recommendation-system-gbakkxhddvvwptzkrwvvlt.streamlit.app/" class="btn live-btn btn-primary">Live Demo</a>
-                            <a href="https://github.com/ArpitaMallik/Movie-Recommendation-System" class="btn btn-outline-secondary git-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Project 3 -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <h4 class="project-title">Medical Insurance Charges Prediction</h4>
-                        <p class="project-desc">
-                            The Medical Insurance Charge Prediction project uses machine learning to estimate a person’s insurance cost based on age, BMI, and other factors.
-                            <span class="more-text">It is built with Python, FastAPI, and Scikit-Learn, using XGBoost for predictions. The model processes inputs, scales necessary features, and predicts charges, helping individuals and insurance companies estimate costs accurately.</span>
-                            <button class="more-btn">More...</button>
-                        </p>
-                        <p class="project-tools"><strong>Tools Used:</strong> Python, FastAPI, HTML5, CSS, Bootstrap, JavaScript</p>
-                        <div class="project-links">
-                            <button class="btn live-btn btn-primary open-gallery" data-images="images\medical insurance.png">Gallery</button>
-                            <a href="https://github.com/ArpitaMallik/Medical-Insurance-Charges-Predictor" class="btn btn-outline-secondary git-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Project 4 -->
-                <div class="col-md-6">
-                    <div class="project-card">
-                        <h4 class="project-title">Online Courses Analysis Dashboard using Power BI</h4>
-                        <p class="project-desc">
-                            This Power BI dashboard provides an analysis of online courses, covering course types, popular categories, and...
-                            <span class="more-text">It offers insights into trends in online education to help understand learner preferences and emerging skill demands.</span>
-                            <button class="more-btn">More...</button>
-                        </p>
-                        <p class="project-tools"><strong>Tools Used:</strong> Microsoft Power BI</p>
-                        <div class="project-links">
-                            <button class="btn live-btn btn-primary open-gallery" data-images="images\powerbi online course.png">Gallery</button>
-                            <a href="#" class="btn btn-outline-secondary git-btn">GitHub</a>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        
+
+        <!-- Project 2 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Movie Recommendation System</h4>
+                <p class="project-desc">
+                    A web app that recommends movies based on user preferences using collaborative filtering techniques.
+                    <span class="more-text">Integrates TMDb API to fetch movie posters and descriptions. Built with Streamlit for easy deployment.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Python, Streamlit</p>
+                <div class="project-links">
+                    <a href="https://movie-recommendation-system-gbakkxhddvvwptzkrwvvlt.streamlit.app/" class="btn live-btn btn-primary">Live Demo</a>
+                    <a href="https://github.com/ArpitaMallik/Movie-Recommendation-System" class="btn btn-outline-secondary git-btn">GitHub</a>
                 </div>
             </div>
         </div>
 
-        <!-- Gallery Overlay -->
-        <div class="gallery-overlay">
-            <div class="gallery-content">
-                <button class="gallery-close">Close</button>
-                <button class="gallery-prev">&#10094;</button>
-                <img id="gallery-image" src="" alt="Project Image">
-                <button class="gallery-next">&#10095;</button>
+        <!-- Project 3 -->
+         <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Cyberbullying Detection App</h4>
+                <p class="project-desc">
+                    Built a Flask app to detect cyberbullying in social media text using machine learning models.
+                    <span class="more-text">The app classifies input text to identify bullying behavior. Deployed using Flask for real-time predictions.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Python, Flask, HTML5, CSS</p>
+                <div class="project-links">
+                    <button class="btn live-btn btn-primary open-gallery" data-images="images\cyber bullying detection app.png">Gallery</button>
+                    <a href="https://github.com/ArpitaMallik/Cyber-Bullying-Detection-App" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
             </div>
         </div>
+        
+
+        <!-- Project 4 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Boston House Price Prediction</h4>
+                <p class="project-desc">
+                    Created an end-to-end ML pipeline for predicting house prices with a user-friendly Flask interface.
+                    <span class="more-text">Includes Dockerized deployment and integration with version control tools.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Python, Flask, Docker, Git, GitHub</p>
+                <div class="project-links">
+                    <a href="https://github.com/ArpitaMallik/Boston-House-Price-Prediction" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Medical Insurance Charges Prediction</h4>
+                <p class="project-desc">
+                    Built a prediction model for medical insurance charges integrated into a FastAPI backend.
+                    <span class="more-text">Uses XGBoost for regression and features a simple web UI for interaction.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Python, FastAPI, XGBoost, HTML, JavaScript</p>
+                <div class="project-links">
+                    <button class="btn live-btn btn-primary open-gallery" data-images="images\medical insurance.png">Gallery</button>
+                    <a href="https://github.com/ArpitaMallik/Medical-Insurance-Charges-Predictor" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">PowerBI Online Courses Analysis Dashboard</h4>
+                <p class="project-desc">
+                    Analyzed online course data and created interactive dashboards using Power BI.
+                    <span class="more-text">Highlights key insights about course types, categories, and user preferences.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Microsoft Power BI</p>
+                <div class="project-links">
+                    <button class="btn live-btn btn-primary open-gallery" data-images="images\powerbi online course.png">Gallery</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">CUET Thesis & Project Portal</h4>
+                <p class="project-desc">
+                    Developed a portal for CUET students to manage thesis and project workflows.
+                    <span class="more-text">Supports student and teacher logins, project uploads, and document sharing.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> React JS, Firebase</p>
+                <div class="project-links">
+                    <a href="https://github.com/ArpitaMallik/CUET-Thesis-and-Project-Portal" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">TuitionEase</h4>
+                <p class="project-desc">
+                    Contributed to a tuition management web system for students and teachers.
+                    <span class="more-text">Manages tuition schedules, student lists, and communication tools.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                <div class="project-links">
+                    <a href="https://github.com/TuitionEase/TuitionEase" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">ZenSpace – Meditation Based Software</h4>
+                <p class="project-desc">
+                    Built a meditation software with Java Swing and MySQL for data management.
+                    <span class="more-text">Includes guided session tracking and user account management.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> Java Swing, MySQL</p>
+                <div class="project-links">
+                    <a href="https://github.com/Team-Nirvana-ZenSpace/ZenSpace" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Green Lead Official Website</h4>
+                <p class="project-desc">
+                    Designed and maintained the company’s official website built on WordPress.
+                    <span class="more-text">Focused on responsive UI, SEO optimization, and content management.</span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools"><strong>Tools Used:</strong> WordPress</p>
+                <div class="project-links">
+                    <a href="https://greenleadglobal.org/" class="btn btn-outline-secondary git-btn">Website</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
          <!-- PROJECTS SECTION ENDS -->
+
+
+
+
+        <!-- PUBLICATIONS SECTION -->
+
+
+        <div class="pub-container" id="publications">
+            <h2>Publications</h2>
+            <div class="pub-list">
+
+            <div class="pub-item">
+                <div class="pub-title">CUET-823@DravidianLangTech 2025: Shared Task on Multimodal
+                Misogyny Meme Detection in Tamil Language</div>
+                <div class="pub-authors">Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib,
+                Samia Rahman, Hasan Murad</div>
+                <!-- <div class="pub-venue">To appear in Proceedings of the BanglaNLP Workshop, 2025</div> -->
+                <a class="pub-link" href="https://aclanthology.org/2025.dravidianlangtech-1.57/" target="_blank">View Paper</a>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS SECTION ENDS -->
 
 
 

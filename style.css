@@ -948,3 +948,73 @@ i{
         margin: 0 auto;
     }
 }
+
+
+
+
+/* PUBLICATION */
+
+.pub-container {
+        margin-top: 80px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .pub-container h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        border-left: 5px solid #4CAF50;
+        padding-left: 15px;
+    }
+
+    .pub-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .pub-item {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e0e0e0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pub-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .pub-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .pub-authors {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 6px;
+    }
+
+    .pub-venue {
+        font-size: 14px;
+        color: #999;
+    }
+
+    .pub-link {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .pub-link:hover {
+        text-decoration: underline;
+    }

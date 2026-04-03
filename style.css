@@ -32,7 +32,7 @@ body{
 .headline {
     font-size: 20px;
     font-weight: bold;
-    color: purple;
+    color: rgb(19, 3, 19);
     background: rgb(255, 255, 255);
     padding: 12px 24px;
     border-radius: 25px;
@@ -41,7 +41,7 @@ body{
     text-align: center;
     margin: 0 auto; 
     display: block;
-    width: 30%;
+    width: 25%;
     margin-bottom: 30px;
 }
 
@@ -482,26 +482,56 @@ button{
 /* ABOUT ME AND SKILLS SECTION END*/
 
 
+/* NAVBAR EFFECTS */
 
-
-
-
-
-
-
-
-
-
-.section:hover{
-    color: rgb(248, 246, 246);
-    font-weight: bolder;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #fefefe, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff, 17px -5px 3px rgba(255,255,255,0);
+.section {
+    position: relative;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.25s ease;
 }
 
+.section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #6c63ff, #8b83ff);
+    transition: width 0.3s ease;
+}
+
+.section {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.section:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+    text-shadow: 0 4px 12px rgba(108, 99, 255, 0.35);
+}
+
+.section:hover::after {
+    width: 100%;
+}
 button.navbar-toggler {
     background-color: white;
   }
-  
+
+.section {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+/* NAVBAR EFFECTS END */
+
+
+
 
 i{
     font-size: 30px;
@@ -606,7 +636,7 @@ i{
 .edu-container .headline {
     font-size: 20px;
     font-weight: 700;
-    color: #000000;
+    /* color: #000000; */
     margin-bottom: 38px;
     text-align: center;
     letter-spacing: -0.5px;
@@ -775,7 +805,7 @@ i{
 
     .edu-container .headline {
         display: inline-block;
-        font-size: 20px;
+        /* font-size: 16px; */
         line-height: 1.2;
         padding: 12px 22px;
         border-radius: 999px;
@@ -1014,9 +1044,9 @@ i{
 
 .headline,
 .projects-title {
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 700;
-    color: #000000;
+    /* color: #000000; */
     margin-bottom: 36px;
     text-align: center;
     letter-spacing: -0.5px;
@@ -1401,19 +1431,14 @@ i{
 
 
 /* PUBLICATIONS */
+/* PUBLICATIONS SECTION */
 .pub-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 80px auto;
-    padding: 32px 28px;
-    background: rgba(12, 12, 12, 0.72);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 0 20px;
 }
 
-.pub-container h2 {
+/* .pub-container h2 {
     font-size: 36px;
     font-weight: 700;
     color: #ffffff;
@@ -1421,45 +1446,60 @@ i{
     letter-spacing: -0.5px;
     padding-left: 16px;
     border-left: 5px solid #6c63ff;
-}
+} */
 
 /* list */
 .pub-list {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 20px;
 }
 
-/* each publication card */
+/* card */
 .pub-item {
-    background: rgba(255, 255, 255, 0.06);
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px 22px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border-radius: 18px;
+    padding: 22px 22px 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    overflow: hidden;
 }
 
+/* top accent line (consistent with other sections) */
+.pub-item::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6c63ff, #8b83ff);
+    opacity: 0.95;
+}
+
+/* hover */
 .pub-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
-    border-color: rgba(108, 99, 255, 0.45);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+    border-color: rgba(108, 99, 255, 0.4);
 }
 
 /* title */
 .pub-title {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.45;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* authors */
+/* authors (if used later) */
 .pub-authors {
     font-size: 15px;
     color: rgba(255, 255, 255, 0.82);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.7;
 }
 
@@ -1467,34 +1507,84 @@ i{
 .pub-venue {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.65);
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
-/* link */
+/* link button */
 .pub-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 6px;
-    padding: 10px 16px;
+    gap: 6px;
+    padding: 10px 18px;
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
     text-decoration: none;
     background: linear-gradient(135deg, #6c63ff, #4f46e5);
     border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.32);
     transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.32);
 }
 
+/* arrow indicator (nice touch) */
+.pub-link::after {
+    content: "↗";
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* hover */
 .pub-link:hover {
-    text-decoration: none;
-    transform: translateY(-1px);
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(79, 70, 229, 0.4);
     opacity: 0.95;
 }
 
+/* Tablet */
+@media (max-width: 768px) {
+    .pub-container {
+        margin: 60px auto;
+        padding: 0 16px;
+    }
 
+    .pub-container h2 {
+        font-size: 30px;
+    }
+
+    .pub-title {
+        font-size: 19px;
+    }
+
+    .pub-venue {
+        font-size: 13.5px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .pub-container h2 {
+        font-size: 27px;
+    }
+
+    .pub-item {
+        padding: 18px;
+    }
+
+    .pub-title {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .pub-venue {
+        font-size: 13px;
+    }
+
+    .pub-link {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+    }
+}
 
 
 /* ACHIEVEMENTS SECTION */
@@ -1505,9 +1595,9 @@ i{
 }
 
 .achievements-container h2 {
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 700;
-    color: #ffffff;
+    /* color: #ffffff; */
     margin-bottom: 34px;
     letter-spacing: -0.5px;
     text-align: center;
@@ -1618,7 +1708,8 @@ i{
     }
 
     .achievements-container h2 {
-        font-size: 30px;
+        font-size: 16px;
+        text-align: center;
         margin-bottom: 28px;
     }
 
@@ -1649,8 +1740,17 @@ i{
 
 /* Mobile */
 @media (max-width: 480px) {
-    .achievements-container h2 {
-        font-size: 27px;
+    .achievements-container .headline h2 {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 12px 22px;
+        border-radius: 999px;
+        margin: 0 auto 24px;
+        text-align: center;
+        width: auto;
+        max-width: 100%;
+        white-space: normal;
     }
 
     .achievements-list {

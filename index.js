@@ -31,6 +31,22 @@ spans.forEach((span) =>{
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("toggleText");
+    const collapseEl = document.getElementById("demo");
+
+    collapseEl.addEventListener("shown.bs.collapse", function () {
+        toggle.textContent = "See Less";
+    });
+
+    collapseEl.addEventListener("hidden.bs.collapse", function () {
+        toggle.textContent = "Learn More";
+    });
+});
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".more-btn").forEach(button => {
             button.addEventListener("click", function () {
                 const moreText = this.previousElementSibling;

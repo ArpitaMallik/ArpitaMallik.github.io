@@ -62,42 +62,45 @@
 
         <!-- MAIN -->
 
-        <div class="container main mt-3">
-            <div class="row" id="about">
+        <div class="container main about-section mt-3" id="about">
+            <div class="row align-items-center" style="margin-top: 100px;">
+                
                 <div class="img-cont col-lg-6">
-                    <img style="width:70%;" class="rounded-circle mt-4" src="images\arpii.jpg">
+                    <div class="about-image-wrap">
+                        <img class="about-image" src="images\dp.jpg" alt="Arpita Mallik">
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="title p-5">
-                        <h3 id="hello about"><p style="font-size: 50px; color: white; font-weight: bold;">HELLO!<p style="color:aliceblue;">I'M ARPITA MALLIK.</h3><br>
-                        <p style="color: rgb(254, 250, 250); font-size: 17px;">A Computer Science and Engineering undergraduate at Chittagong University of Engineering and Technology, Chittagong.</p>
-                        <a href="#demo" data-bs-toggle="collapse" style="color: white; text-decoration: none; font-weight: bolder; font-size: 20px;">Learn More</a>
-                        <div id="demo" class="collapse">
-                            <p style="color:white; font-size: 17px;">My current focus is on deepening my skills in machine learning, deep learning, and natural language processing (NLP), areas that I have a strong interest in.<br>
 
-                            Alongside my academic work, I serve as a Tech Solutions Architect at Greenlead, where I manage and maintain their website and solve various tech-related challenges. I’m passionate about using technology to support climate change awareness initiatives and always eager to take on new challenges.</p>
-                        </div><br>
-                        <!-- <a href="Arpita Resume-Latex.pdf" download>
-                            <button class="btn btn-outline-light mt-3">Download CV</button>
+                <div class="col-lg-6">
+                    <div class="about-card">
+                        <span class="about-greeting">HELLO!</span>
+                        <h2 class="about-name">I'm Arpita Mallik.</h2>
+
+                        <p class="about-intro">
+                            A CSE undergraduate at Chittagong University of Engineering and Technology, Chittagong, with a focus on building intelligent systems using modern AI techniques.
+                        </p>
+
+                        <a href="#demo" 
+                        class="learn-more-link" 
+                        data-bs-toggle="collapse" 
+                        id="toggleText">
+                        Learn More
                         </a>
-                        <h5 class="info-title">Freelance</h5>
-                         <p class="info-detail">
-                            <span class="badge bg-success">Available</span>
-                        </p> -->
-                        <div class="info-flex">
-                            <a href="Arpita Mallik Resume.pdf" download>
-                                <button class="btn btn-outline-light" style="margin-top:10px;">Download CV</button>
-                            </a>
-                            <!-- <div class="freelance-info">
-                                <h5 class="info-title">Freelance</h5>
-                                <p class="info-detail">
-                                    <span class="badge bg-success">Available</span>
-                                </p>
-                            </div> -->
+
+                        <div id="demo" class="collapse">
+                            <p class="about-extra">
+                                I am particularly interested in Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems, with a focus on designing context-aware, reliable, and scalable applications. My work explores how retrieval and generation can be combined to improve performance in low-resource language settings.
+                            </p>
                         </div>
-                        
-                    </div>    
+
+                        <div class="info-flex">
+                            <a href="Arpita-Mallik-CV.pdf" download class="cv-btn">
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -153,7 +156,7 @@
         
                         <div class="skill-card">
                             <div class="skill-icon powerbi">
-                                <img src="https://static-00.iconduck.com/assets.00/tensorflow-icon-955x1024-hd4xzbqj.png" alt="tensorflow">
+                                <img src="https://miro.medium.com/1*OECT3cWormqy76Eb_M4o_Q.png" alt="tensorflow">
                             </div>
                             <div class="skill-content">
                                 <h4 class="skill-name">TensorFlow</h4>
@@ -226,27 +229,30 @@
 
         <!-- EDUCATION -->
 
-        <div class="edu-container reveal" style="margin-top: 80px;" id="edu">
+        <div class="edu-container reveal" id="edu">
             <div class="row">
                 <h2 class="headline">Education</h2>
+
                 <div class="edu-contents">
                     <div class="box">
-                        <h4>2021-2026</h4>
+                        <h4>2021 - 2026</h4>
                         <h3>Bachelor of Science in Computer Science and Engineering</h3>
-                        <p>Chittagong University of Engineering and Technology, Chittagong</p>
-                        <p style="font-size: 14px; color: #eeeded;">CGPA: 3.55 (out of 4.00)</p>
+                        <p class="edu-place">Chittagong University of Engineering and Technology, Chittagong</p>
+                        <p class="edu-grade">CGPA: 3.55 / 4.00</p>
                     </div>
+
                     <div class="box">
-                        <h4>2018-2020</h4>
+                        <h4>2018 - 2020</h4>
                         <h3>Higher Secondary Education</h3>
-                        <p>Cumilla Victoria College, Cumilla</p>
-                        <p style="font-size: 14px; color: #ffffff;">GPA: 5.00 (out of 5.00)</p>
+                        <p class="edu-place">Cumilla Victoria College, Cumilla</p>
+                        <p class="edu-grade">GPA: 5.00 / 5.00</p>
                     </div>
+
                     <div class="box">
-                        <h4>2011-2018</h4>
+                        <h4>2011 - 2018</h4>
                         <h3>Secondary Education</h3>
-                        <p>Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
-                        <p style="font-size: 14px; color: #ffffff;">GPA: 5.00 (out of 5.00)</p>
+                        <p class="edu-place">Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
+                        <p class="edu-grade">GPA: 5.00 / 5.00</p>
                     </div>
                 </div>
             </div>
@@ -256,10 +262,31 @@
         <!-- EDUCATION ENDS -->
 
        <!-- PROJECTS SECTION -->
-<div class="container my-5" id="project">
-    <h2 class="headline">My Projects</h2>
-    <div class="row">
+        <div class="container my-5" id="project">
+            <h2 class="headline">My Projects</h2>
+            <div class="row">
 
+                <!-- Project 1 -->
+            <div class="col-md-6">
+            <div class="project-card">
+                <h4 class="project-title">Vehicle Insurance Prediction (MLOps)</h4>
+                <p class="project-desc">
+                    Designed and deployed a full-scale machine learning pipeline for vehicle insurance prediction, along with production deployment.
+                    <span class="more-text">
+                        Built a modular, artifact-driven architecture with MongoDB ingestion, schema validation, feature engineering, and model evaluation with threshold-based promotion. Integrated AWS S3 for model registry, Dockerized services, and automated CI/CD using GitHub Actions with deployment on EC2.
+                    </span>
+                    <button class="more-btn">More...</button>
+                </p>
+                <p class="project-tools">
+                    <strong>Tools Used:</strong> Python, scikit-learn, FastAPI, Flask, MongoDB Atlas, AWS (S3, EC2, ECR, IAM), Docker, GitHub Actions
+                </p>
+                <div class="project-links">
+                    <!-- <a href="http://44.200.173.215:5000/" class="btn live-btn btn-primary">Live Demo</a> -->
+                    <a href="https://github.com/ArpitaMallik/MLOps-Vehicle-Insurance-Domain" class="btn btn-outline-secondary git-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+        
         <!-- Project 1 -->
          <div class="col-md-6">
             <div class="project-card">
@@ -435,33 +462,99 @@
 
 
 
-        <!-- PUBLICATIONS SECTION -->
-
+        <!-- PUBLICATIONS SECTION-->
 
         <div class="pub-container" id="publications">
             <h2>Publications</h2>
             <div class="pub-list">
 
-            <div class="pub-item">
-                <div class="pub-title">CUET-823@DravidianLangTech 2025: Shared Task on Multimodal
-                Misogyny Meme Detection in Tamil Language</div>
-                <div class="pub-authors">Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib,
-                Samia Rahman, Hasan Murad</div>
-                <!-- <div class="pub-venue">To appear in Proceedings of the BanglaNLP Workshop, 2025</div> -->
-                <a class="pub-link" href="https://aclanthology.org/2025.dravidianlangtech-1.57/" target="_blank">View Paper</a>
-            </div>
+                <div class="pub-item">
+                    <div class="pub-title">
+                        CUET-823@DravidianLangTech 2025: Shared Task on Multimodal Misogyny Meme Detection in Tamil Language
+                    </div>
+                    <div class="pub-authors">
+                        Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib, Samia Rahman, Hasan Murad
+                    </div>
+                    <div class="pub-venue">
+                        ACL Anthology · 2025
+                    </div>
+                    <a class="pub-link" href="https://aclanthology.org/2025.dravidianlangtech-1.57/" target="_blank">
+                        View Paper
+                    </a>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">
+                        CUET-823 at MAHED 2025 Shared Task: Large Language Model-Based Framework for Emotion, Offensive, and Hate Detection in Arabic
+                    </div>
+                    <div class="pub-authors">
+                        Ratnajit Dhar, Arpita Mallik
+                    </div>
+                    <div class="pub-venue">
+                        ACL Anthology · Nov 9, 2025
+                    </div>
+                    <a class="pub-link" href="https://aclanthology.org/2025.arabicnlp-sharedtasks.84/" target="_blank">
+                        View Paper
+                    </a>
+                </div>
 
             </div>
         </div>
 
-        <!-- PUBLICATIONS SECTION ENDS -->
+        <!-- PUBLICATIONS SECTION ENDS-->
+
+
+
+
+        <!--Honors and Awards-->
+
+        <div class="achievements-container" id="achievements">
+            <h2>Achievements & Honors</h2>
+            <div class="achievements-list">
+
+                <div class="achievement-item">
+                    <div class="achievement-title">
+                        Finalist – DL Sprint 4.0 (BUET CSE Fest 2026)
+                    </div>
+                    <div class="achievement-desc">
+                        Ranked Top 18/192 teams in a nationwide deep learning competition on Bangla long-form speech recognition and speaker diarization. 
+                        Built a pipeline using Whisper-based ASR and diarization models to handle long-duration audio and speaker segmentation.
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-title">
+                        Champion – NodeScape Hackathon (CUET Computer Club, 2025)
+                    </div>
+                    <div class="achievement-desc">
+                        Secured 1st place in a 3-phase hackathon. Developed an end-to-end AI system including algorithm visualization, graph classification, 
+                        and Dockerized CI/CD deployment using React, Flask, and Python.
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-title">
+                        Finalist – Intra CUET ML Contest (IEEE CS CUET SB, 2025)
+                    </div>
+                    <div class="achievement-desc">
+                        Built LLM-based models for solving Bengali physics problems, focusing on reasoning in low-resource language settings 
+                        to improve educational accessibility.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--Honors and Awards ENDS-->
+
 
 
 
 
          <!-- CONTACT -->
          <div class="contactus reveal" id="contact">
-            <h3 class="headline">Get In Touch</h3>
+            <h3 class="headline" style="margin-top: 100px;">Get In Touch</h3>
             <div class="cont-box">
                 <!-- Form Section -->
                 <div class="cont form">
@@ -526,10 +619,13 @@
                 </div>
             </div>
         </div>
-        
+
 
          <!-- CONTACT ENDS -->
         
+
+
+
 
         <!-- SOCIAL MEDIA SECTION -->
 

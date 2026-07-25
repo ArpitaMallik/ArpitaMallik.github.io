@@ -1906,3 +1906,103 @@ i{
         line-height: 1.7;
     }
 }
+
+
+
+ .skills-redesign{
+    --sr-surface: #161d26;
+    --sr-border: #232d3a;
+    --sr-text: #e8edf2;
+    --sr-accent: #5eead4;
+    --sr-accent-dim: #5eead422;
+ 
+    max-width: 900px;
+    margin: 0 auto;
+  }
+ 
+  .skills-redesign .sr-headline{
+    color: var(--sr-text);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+  .skills-redesign .sr-headline::after{
+    content:"";
+    display:block;
+    width: 46px;
+    height: 3px;
+    background: var(--sr-accent);
+    margin-top: 14px;
+    border-radius: 2px;
+  }
+ 
+  .skills-redesign .skill-groups{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+  }
+  @media (max-width: 680px){
+    .skills-redesign .skill-groups{ grid-template-columns: 1fr; }
+  }
+ 
+  .skills-redesign .skill-group{
+    --ga: var(--sr-accent); /* per-group accent, overridden below */
+    background: var(--sr-surface);
+    border: 1px solid var(--sr-border);
+    border-left: 3px solid var(--ga);
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+ 
+  /* one accent color per category, in reading order */
+  .skills-redesign .skill-group:nth-child(1){ --ga: #a78bfa; } /* AI Frameworks & LLMs   - violet */
+  .skills-redesign .skill-group:nth-child(2){ --ga: #60a5fa; } /* Vector Databases       - blue   */
+  .skills-redesign .skill-group:nth-child(3){ --ga: #5eead4; } /* ML & NLP               - teal   */
+  .skills-redesign .skill-group:nth-child(4){ --ga: #fbbf24; } /* Backend & Deployment   - amber  */
+  .skills-redesign .skill-group:nth-child(5){ --ga: #fb7185; } /* Frontend & Extensions  - rose   */
+  .skills-redesign .skill-group:nth-child(6){ --ga: #4ade80; } /* MLOps & Tools          - green  */
+ 
+  .skills-redesign .skill-group-title{
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ga);
+    margin: 0 0 16px;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .skills-redesign .skill-group-title::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ga);
+    flex-shrink: 0;
+  }
+ 
+  .skills-redesign .skill-chips{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+ 
+  .skills-redesign .skill-chip{
+    background: transparent;
+    border: 1px solid var(--sr-border);
+    padding: 7px 14px;
+    border-radius: 999px;
+    transition: border-color .15s ease, background .15s ease, transform .15s ease;
+  }
+  .skills-redesign .skill-chip:hover{
+    border-color: var(--ga);
+    background: color-mix(in srgb, var(--ga) 15%, transparent);
+    transform: translateY(-1px);
+  }
+  .skills-redesign .skill-chip span{
+    font-size: 0.85rem;
+    color: var(--sr-text);
+    font-weight: 500;
+    white-space: nowrap;
+  }

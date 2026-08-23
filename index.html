@@ -4,749 +4,505 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Arpita Mallik</title>
-    
+    <meta name="description" content="Arpita Mallik — Computer Science and Engineering undergraduate at CUET. Research on large language models, retrieval-augmented generation, and NLP for low-resource languages.">
+    <meta name="author" content="Arpita Mallik">
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <!-- FONT END -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <!-- FONTS END -->
 
-    <!-- BOOTSTRAP -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- ICONS END -->
 
-    <!-- BOOTSTRAP END -->
     <link rel="stylesheet" href="style.css">
-    
 </head>
-<body class="main-content">
-    <div class="banner">
-        <header class="sticky-top bg-dark">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-dark">
-                  
-                    <a class="navbar-brand fw-bold text-white px-3">Arpita Mallik</a>
 
-                    <!-- DAY / NIGHT MODE BUTTON -->
-                    <button class="theme-toggle" type="button" id="themeToggle"
-                            title="Switch to day mode" aria-label="Switch to day mode">
-                        <i class="bi bi-sun-fill"></i>
-                    </button>
+<body>
 
+    <!-- HEADER -->
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <a class="brand" href="#top">Arpita Mallik</a>
 
-                    <button class="navbar-toggler" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                            aria-controls="navbarSupportedContent" aria-expanded="false" 
-                            aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-        
-                  
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav text-center">
-                            <li class="nav-item"><a class="section nav-link" href="#about">About Me</a></li>
-                            <li class="nav-item"><a class="section skill nav-link" href="#skill">Skills</a></li>
-                            <li class="nav-item"><a class="section edu nav-link" href="#edu">Education</a></li>
-                            <li class="nav-item"><a class="section project nav-link" href="#projects">Projects</a></li>
-                            <li class="nav-item"><a class="section project nav-link" href="#publications">Publications</a></li>
-                            <li class="nav-item"><a class="section project nav-link" href="#achievements">Achievements</a></li>
-                            <li class="nav-item"><a class="section contact nav-link" href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        
-        
+            <nav class="site-nav" id="siteNav">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#awards">Awards</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        
+            <div class="header-actions">
+                <!-- DAY / NIGHT MODE BUTTON -->
+                <button class="theme-toggle" type="button" id="themeToggle"
+                        title="Switch to night mode" aria-label="Switch to night mode">
+                    <i class="bi bi-moon"></i>
+                </button>
 
-        <!-- MAIN -->
-
-        <div class="container main about-section mt-3" id="about">
-            <div class="row align-items-center" style="margin-top: 100px;">
-                
-                <div class="img-cont col-lg-6">
-                    <div class="about-image-wrap">
-                        <img class="about-image" src="images\dp.jpg" alt="Arpita Mallik">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="about-card">
-                        <span class="about-greeting">HELLO!</span>
-                        <h2 class="about-name">I'm Arpita Mallik.</h2>
-
-                        <p class="about-intro">
-                            A CSE undergraduate at Chittagong University of Engineering and Technology, Chittagong, with a focus on building intelligent systems using modern AI techniques.
-                        </p>
-
-                        <a href="#demo" 
-                        class="learn-more-link" 
-                        data-bs-toggle="collapse" 
-                        id="toggleText">
-                        Learn More
-                        </a>
-
-                        <div id="demo" class="collapse">
-                            <p class="about-extra">
-                                I am particularly interested in Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) systems, with a focus on designing context-aware, reliable, and scalable applications. My work explores how retrieval and generation can be combined to improve performance in low-resource language settings.
-                            </p>
-                        </div>
-
-                        <div class="info-flex">
-                            <a href="CV.pdf" download class="cv-btn">
-                                Download CV
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                <button class="nav-toggle" type="button" id="navToggle"
+                        aria-controls="siteNav" aria-expanded="false" aria-label="Open menu">
+                    <i class="bi bi-list"></i>
+                </button>
             </div>
         </div>
-
-        <!-- MAIN END -->
-
-
-         <div class="skills-redesign" id="skill">
-  <h2 class="sr-headline">Skills</h2>
- 
-  <div class="skill-groups">
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">AI Frameworks &amp; LLMs</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>LangChain</span></div>
-        <div class="skill-chip"><span>HuggingFace Transformers</span></div>
-        <div class="skill-chip"><span>LoRA/QLoRA Fine-Tuning</span></div>
-        <div class="skill-chip"><span>Prompt Engineering</span></div>
-        <div class="skill-chip"><span>RAG</span></div>
-        <!-- <div class="skill-chip"><span>LLM Agents</span></div> -->
-      </div>
-    </div>
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">Vector Databases</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>Pinecone</span></div>
-        <div class="skill-chip"><span>FAISS</span></div>
-        <div class="skill-chip"><span>ChromaDB</span></div>
-        <div class="skill-chip"><span>Semantic Search &amp; Embeddings</span></div>
-      </div>
-    </div>
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">ML &amp; NLP</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>PyTorch</span></div>
-        <div class="skill-chip"><span>scikit-learn</span></div>
-        <div class="skill-chip"><span>Transformers</span></div>
-        <div class="skill-chip"><span>Text Classification</span></div>
-        <div class="skill-chip"><span>Sequence Modelling</span></div>
-        <div class="skill-chip"><span>Model Evaluation</span></div>
-      </div>
-    </div>
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">Backend &amp; Deployment</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>Python</span></div>
-        <div class="skill-chip"><span>FastAPI</span></div>
-        <div class="skill-chip"><span>Flask</span></div>
-        <div class="skill-chip"><span>Docker</span></div>
-        <div class="skill-chip"><span>AWS (EC2, S3, ECR)</span></div>
-        <div class="skill-chip"><span>GitHub Actions</span></div>
-        <div class="skill-chip"><span>CI/CD</span></div>
-      </div>
-    </div>
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">Frontend &amp; Extensions</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>JavaScript</span></div>
-        <div class="skill-chip"><span>React JS</span></div>
-        <div class="skill-chip"><span>WebSockets</span></div>
-      </div>
-    </div>
- 
-    <div class="skill-group">
-      <h3 class="skill-group-title">MLOps &amp; Tools</h3>
-      <div class="skill-chips">
-        <div class="skill-chip"><span>MLflow</span></div>
-        <div class="skill-chip"><span>DVC</span></div>
-        <div class="skill-chip"><span>Git</span></div>
-        <div class="skill-chip"><span>GitHub</span></div>
-        <div class="skill-chip"><span>Prometheus</span></div>
-        <div class="skill-chip"><span>Grafana</span></div>
-        <div class="skill-chip"><span>PostgreSQL</span></div>
-        <div class="skill-chip"><span>Redis</span></div>
-        <div class="skill-chip"><span>SQL</span></div>
-      </div>
-    </div>
- 
-  </div>
-</div>
- 
-        
-        
-        
-        <!-- SKILLS ENDS HERE -->
+    </header>
+    <!-- HEADER END -->
 
 
+    <main class="page">
+
+        <!-- INTRO -->
+        <section class="intro" id="about">
+            <div class="intro-text">
+                <h1 class="intro-name">Arpita Mallik</h1>
+                <p class="intro-affiliation">
+                    B.Sc. in Computer Science and Engineering<br>
+                    Chittagong University of Engineering and Technology
+                </p>
+
+                <p class="lede">
+                    I am Arpita Mallik, a recent Computer Science and Engineering graduate from CUET
+                    with a research focus on artificial intelligence, natural language processing,
+                    and large language models.
+                </p>
+
+                <p>
+                    My current interests include LLMs, low-resource and multilingual NLP,
+                    parameter-efficient fine-tuning, and trustworthy AI. I am especially interested
+                    in developing robust and reliable AI systems that address real-world challenges
+                    and have meaningful benefits for people, particularly in healthcare and underserved
+                    language communities. I hope to pursue research that not only advances AI capabilities
+                    but also makes these technologies more reliable and useful in people's lives. Check out my CV for more on my ongoing research and projects.
+                </p>
+                <p class="intro-actions">
+                    <a class="btn-primary" href="CV.pdf" download>Curriculum Vitae</a>
+                    <span class="intro-links">
+                        <a href="mailto:arpitamallik13@gmail.com">Email</a>
+                        <a href="https://github.com/ArpitaMallik" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/arpita-mallik-993804239/" target="_blank" rel="noopener">LinkedIn</a>
+                    </span>
+                </p>
+            </div>
+
+            <div class="intro-photo">
+                <img src="images/dp.jpg" alt="Portrait of Arpita Mallik">
+            </div>
+        </section>
+        <!-- INTRO END -->
+
+
+        <!-- RESEARCH INTERESTS -->
+        <section class="section" id="research">
+            <h2 class="section-title">Research Interests</h2>
+
+           <p class="section-lede">
+    I am interested in making large language models dependable outside the high-resource
+    settings they are usually built and benchmarked for.
+</p>
+
+<ul class="interest-list">
+    <li>
+        <span class="interest-term">Large Language Models</span>
+        <span class="interest-desc">Parameter-efficient fine-tuning and adaptation; reasoning and generation in non-English settings.</span>
+    </li>
+    <li>
+        <span class="interest-term">Trustworthy AI</span>
+        <span class="interest-desc">Reliability and factuality of model outputs in sensitive, high-stakes domains like healthcare and law.</span>
+    </li>
+    <li>
+        <span class="interest-term">Low-Resource NLP</span>
+        <span class="interest-desc">Bengali and other under-served languages across text, speech, and multimodal input.</span>
+    </li>
+    <li>
+        <span class="interest-term">AI for Healthcare</span>
+        <span class="interest-desc">Emotion-aware and context-sensitive QA systems for women's health in under-served communities.</span>
+    </li>
+    <!-- <li>
+        <span class="interest-term">Evaluation</span>
+        <span class="interest-desc">LLM-as-judge protocols and their agreement with domain experts.</span>
+    </li> -->
+</ul>
+        </section>
+        <!-- RESEARCH INTERESTS END -->
+
+
+        <!-- PUBLICATIONS -->
+        <section class="section" id="publications">
+            <h2 class="section-title">Publications</h2>
+
+            <ol class="pub-list">
+
+                <li class="pub-item">
+                    <p class="pub-title">
+                        823-OLT @ BUET DL Sprint 4.0: Context-Aware Windowing for ASR and Fine-Tuned
+                        Speaker Diarization in Bengali Long Form Audio
+                    </p>
+                    <p class="pub-authors">
+                        Ratnajit Dhar, <span class="me">Arpita Mallik</span>
+                    </p>
+                    <p class="pub-venue">
+                        <span class="venue-name">arXiv preprint</span> · February 2026
+                        <a class="pub-link" href="https://arxiv.org/abs/2602.21183" target="_blank" rel="noopener">Paper</a>
+                    </p>
+                </li>
+
+                <li class="pub-item">
+                    <p class="pub-title">
+                        CUET-823 at MAHED 2025 Shared Task: Large Language Model-Based Framework for
+                        Emotion, Offensive, and Hate Detection in Arabic
+                    </p>
+                    <p class="pub-authors">
+                        Ratnajit Dhar, <span class="me">Arpita Mallik</span>
+                    </p>
+                    <p class="pub-venue">
+                        <span class="venue-name">Proceedings of ArabicNLP 2025</span>, ACL Anthology · November 2025
+                        <a class="pub-link" href="https://aclanthology.org/2025.arabicnlp-sharedtasks.84/" target="_blank" rel="noopener">Paper</a>
+                    </p>
+                </li>
+
+                <li class="pub-item">
+                    <p class="pub-title">
+                        Assessing the Reliability of Large Language Models in the Bengali Legal Context:
+                        A Comparative Evaluation Using LLM-as-Judge and Legal Experts
+                    </p>
+                    <p class="pub-authors">
+                        <span class="me">Arpita Mallik</span>, Ratnajit Dhar, Udoy Das,
+                        Momtazul Arefin Labib, Samia Rahman, Hasan Murad
+                    </p>
+                    <p class="pub-venue">
+                        <span class="venue-name">arXiv preprint</span> · November 2025
+                        <a class="pub-link" href="https://arxiv.org/abs/2511.05627" target="_blank" rel="noopener">Paper</a>
+                    </p>
+                </li>
+
+                <li class="pub-item">
+                    <p class="pub-title">
+                        CUET-823@DravidianLangTech 2025: Shared Task on Multimodal Misogyny Meme
+                        Detection in Tamil Language
+                    </p>
+                    <p class="pub-authors">
+                        <span class="me">Arpita Mallik</span>, Ratnajit Dhar, Udoy Das,
+                        Momtazul Arefin Labib, Samia Rahman, Hasan Murad
+                    </p>
+                    <p class="pub-venue">
+                        <span class="venue-name">Proceedings of DravidianLangTech 2025</span>, ACL Anthology · May 2025
+                        <a class="pub-link" href="https://aclanthology.org/2025.dravidianlangtech-1.57/" target="_blank" rel="noopener">Paper</a>
+                    </p>
+                </li>
+
+            </ol>
+        </section>
+        <!-- PUBLICATIONS END -->
+
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+
+            <div class="project-list">
+
+                <article class="project">
+                    <h3 class="project-title">Vehicle Insurance Prediction — End-to-End MLOps Pipeline</h3>
+                    <p class="project-desc">
+                        Designed and deployed a production machine learning pipeline for vehicle insurance
+                        prediction.<span class="more-text"> Built a modular, artifact-driven architecture with MongoDB
+                        ingestion, schema validation, feature engineering, and model evaluation with
+                        threshold-based promotion. Integrated AWS S3 as a model registry, containerised the
+                        services, and automated CI/CD through GitHub Actions with deployment on EC2.</span>
+                        <button class="more-btn" type="button">More</button>
+                    </p>
+                    <p class="project-meta">
+                        Python · scikit-learn · FastAPI · MongoDB Atlas · AWS (S3, EC2, ECR, IAM) · Docker · GitHub Actions
+                    </p>
+                    <p class="project-links">
+                        <a href="https://github.com/ArpitaMallik/MLOps-Vehicle-Insurance-Domain" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-title">ChatPDF — Retrieval-Augmented Document Assistant</h3>
+                    <p class="project-desc">
+                        A chatbot that answers questions by retrieving relevant passages from uploaded
+                        PDFs.<span class="more-text"> Combines dense vector search over document chunks with generation,
+                        so answers stay grounded in the source material rather than in model priors.</span>
+                        <button class="more-btn" type="button">More</button>
+                    </p>
+                    <p class="project-meta">
+                        Python · LangChain · FAISS · Streamlit · FastAPI · Google Generative AI
+                    </p>
+                    <p class="project-links">
+                        <a href="https://chatpdf-using-langchain-ch9am4nnyzryzajc9v6vg2.streamlit.app/" target="_blank" rel="noopener">Demo</a>
+                        <a href="https://github.com/ArpitaMallik/ChatPDF-Conversational-PDF-Assistant" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-title">Container Job Orchestrator</h3>
+                    <p class="project-desc">
+                        A distributed job execution platform built on Redis queues and containerised
+                        workers.<span class="more-text"> Supports asynchronous dispatch, isolated execution, real-time log
+                        streaming over WebSockets and Redis Pub/Sub, and PostgreSQL persistence — the same
+                        backend patterns that model-serving pipelines rely on.</span>
+                        <button class="more-btn" type="button">More</button>
+                    </p>
+                    <p class="project-meta">
+                        Python · FastAPI · Redis · PostgreSQL · Docker · WebSockets
+                    </p>
+                    <p class="project-links">
+                        <a href="https://github.com/ArpitaMallik/Container-Job-Orchestration" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-title">Stress Monitoring and Load-Testing Pipeline</h3>
+                    <p class="project-desc">
+                        An observability and load-testing setup for FastAPI services.<span class="more-text"> Instruments
+                        Prometheus metrics and Grafana dashboards behind a containerised deployment, with
+                        configurable k6 load tests reporting throughput, P95/P99 latency, and availability
+                        on a three-second collection interval.</span>
+                        <button class="more-btn" type="button">More</button>
+                    </p>
+                    <p class="project-meta">
+                        Python · FastAPI · Prometheus · Grafana · k6 · Docker
+                    </p>
+                    <p class="project-links">
+                        <a href="https://github.com/ArpitaMallik/Stress-Monitoring-using-Prometheus-and-Grafana" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-title">Medical Insurance Charges Prediction</h3>
+                    <p class="project-desc">
+                        A gradient-boosted regression model for medical insurance charges, served behind a
+                        FastAPI backend with a lightweight web interface.
+                    </p>
+                    <p class="project-meta">
+                        Python · XGBoost · FastAPI · JavaScript
+                    </p>
+                    <p class="project-links">
+                        <button class="link-btn open-gallery" type="button" data-images="images/medical insurance.png">Screenshot</button>
+                        <a href="https://github.com/ArpitaMallik/Medical-Insurance-Charges-Predictor" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+                <article class="project">
+                    <h3 class="project-title">CUET Thesis &amp; Project Portal</h3>
+                    <p class="project-desc">
+                        A departmental portal for managing thesis and project workflows, with separate
+                        student and supervisor roles, submission handling, and document sharing.
+                    </p>
+                    <p class="project-meta">
+                        React · Firebase
+                    </p>
+                    <p class="project-links">
+                        <a href="https://github.com/ArpitaMallik/CUET-Thesis-and-Project-Portal" target="_blank" rel="noopener">Code</a>
+                    </p>
+                </article>
+
+            </div>
+        </section>
+        <!-- PROJECTS END -->
 
 
         <!-- EDUCATION -->
+        <section class="section" id="education">
+            <h2 class="section-title">Education</h2>
 
-        <div class="edu-container reveal" id="edu">
-            <div class="row">
-                <h2 class="headline">Education</h2>
+            <div class="entry-list">
 
-                <div class="edu-contents">
-                    <div class="box">
-                        <h4>2021 - 2026</h4>
-                        <h3>Bachelor of Science in Computer Science and Engineering</h3>
-                        <p class="edu-place">Chittagong University of Engineering and Technology, Chittagong</p>
-                        <p class="edu-grade">CGPA: 3.63 / 4.00</p>
-                    </div>
-
-                    <div class="box">
-                        <h4>2018 - 2020</h4>
-                        <h3>Higher Secondary Education</h3>
-                        <p class="edu-place">Cumilla Victoria College, Cumilla</p>
-                        <p class="edu-grade">GPA: 5.00 / 5.00</p>
-                    </div>
-
-                    <div class="box">
-                        <h4>2011 - 2018</h4>
-                        <h3>Secondary Education</h3>
-                        <p class="edu-place">Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
-                        <p class="edu-grade">GPA: 5.00 / 5.00</p>
+                <div class="entry">
+                    <div class="entry-date">2021 – 2026</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">B.Sc. in Computer Science and Engineering</h3>
+                        <p class="entry-org">Chittagong University of Engineering and Technology, Chattogram</p>
+                        <p class="entry-note">CGPA 3.63 / 4.00</p>
                     </div>
                 </div>
+
+                <div class="entry">
+                    <div class="entry-date">2018 – 2020</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">Higher Secondary Certificate</h3>
+                        <p class="entry-org">Cumilla Victoria College, Cumilla</p>
+                        <p class="entry-note">GPA 5.00 / 5.00</p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-date">2011 – 2018</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">Secondary School Certificate</h3>
+                        <p class="entry-org">Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
+                        <p class="entry-note">GPA 5.00 / 5.00</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
+        <!-- EDUCATION END -->
+
+
+        <!-- AWARDS -->
+        <section class="section" id="awards">
+            <h2 class="section-title">Honors and Awards</h2>
+
+            <div class="entry-list">
+
+                <div class="entry">
+                    <div class="entry-date">2026</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">Finalist — DL Sprint 4.0, BUET CSE Fest</h3>
+                        <p class="entry-org">Top 10% of 192 teams nationwide</p>
+                        <p class="entry-note">
+                            Built a Whisper-based ASR and speaker diarization pipeline for Bengali
+                            long-form audio and speaker segmentation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-date">2025</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">Champion — NodeScape Hackathon, CUET Computer Club</h3>
+                        <p class="entry-org">First place, three-phase competition</p>
+                        <p class="entry-note">
+                            Developed an end-to-end system spanning algorithm visualisation, graph
+                            classification, and containerised CI/CD deployment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-date">2025</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">Finalist — Intra CUET ML Contest, IEEE CS CUET SB</h3>
+                        <p class="entry-org">Bengali reasoning track</p>
+                        <p class="entry-note">
+                            Built LLM-based models for solving Bengali physics problems, targeting
+                            reasoning quality in a low-resource language setting.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- AWARDS END -->
+
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+
+            <dl class="skill-list">
+                <div class="skill-row">
+                    <dt>Languages</dt>
+                    <dd>Python, JavaScript, SQL</dd>
+                </div>
+                <div class="skill-row">
+                    <dt>ML and NLP</dt>
+                    <dd>PyTorch, HuggingFace Transformers, scikit-learn, LoRA / QLoRA fine-tuning, text classification, sequence modelling, model evaluation</dd>
+                </div>
+                <div class="skill-row">
+                    <dt>LLM Systems</dt>
+                    <dd>LangChain, retrieval-augmented generation, prompt engineering, semantic search and embeddings</dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Vector Stores</dt>
+                    <dd>FAISS, Pinecone, ChromaDB</dd>
+                </div>
+                <div class="skill-row">
+                    <dt>Systems and Deployment</dt>
+                    <dd>FastAPI, Flask, Docker, AWS (EC2, S3, ECR), PostgreSQL, Redis, WebSockets</dd>
+                </div>
+                <div class="skill-row">
+                    <dt>MLOps and Tooling</dt>
+                    <dd>MLflow, DVC, Git, GitHub Actions, CI/CD, Prometheus, Grafana</dd>
+                </div>
+            </dl>
+        </section>
+        <!-- SKILLS END -->
+
+
+        <!-- BEYOND RESEARCH -->
+        <section class="section" id="misc">
+            <h2 class="section-title">Beyond Research</h2>
+
+            <p class="misc-text">
+                A little something beyond research: I enjoy singing and occasionally picking up my
+                guitar. I also have a small YouTube channel where I share some of my music.
+                Here&rsquo;s the link if you&rsquo;d like to have a listen —
+                <a href="https://www.youtube.com/@arpita_mallik" target="_blank" rel="noopener">youtube.com/@arpita_mallik</a>.
+            </p>
+        </section>
+        <!-- BEYOND RESEARCH END -->
+
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <p class="section-lede">
+                I am always glad to hear from researchers working on language technology for
+                under-represented languages. The fastest way to reach me is by email.
+            </p>
+
+            <dl class="contact-list">
+                <div class="contact-row">
+                    <dt>Email</dt>
+                    <dd><a href="mailto:arpitamallik13@gmail.com">arpitamallik13@gmail.com</a></dd>
+                </div>
+                <div class="contact-row">
+                    <dt>Location</dt>
+                    <dd>Chittagong University of Engineering and Technology, Chattogram, Bangladesh</dd>
+                </div>
+                <div class="contact-row">
+                    <dt>Elsewhere</dt>
+                    <dd>
+                        <a href="https://github.com/ArpitaMallik" target="_blank" rel="noopener">GitHub</a> ·
+                        <a href="https://www.linkedin.com/in/arpita-mallik-993804239/" target="_blank" rel="noopener">LinkedIn</a> ·
+                        <a href="https://www.youtube.com/@arpita_mallik" target="_blank" rel="noopener">YouTube</a>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+        <!-- CONTACT END -->
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">&copy; 2026 Arpita Mallik</p>
+            <p class="footer-socials">
+                <a href="https://github.com/ArpitaMallik" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/arpita-mallik-993804239/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.youtube.com/@arpita_mallik" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="mailto:arpitamallik13@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </p>
         </div>
+    </footer>
+    <!-- FOOTER END -->
 
 
-        <!-- EDUCATION ENDS -->
-
-       <!-- PROJECTS SECTION -->
-        <div class="container my-5" id="projects">
-            <h2 class="headline">My Projects</h2>
-            <div class="row">
-
-                <!-- Project 1 -->
-            <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Vehicle Insurance Prediction (MLOps)</h4>
-                <p class="project-desc">
-                    Designed and deployed a full-scale machine learning pipeline for vehicle insurance prediction, along with production deployment.
-                    <span class="more-text">
-                        Built a modular, artifact-driven architecture with MongoDB ingestion, schema validation, feature engineering, and model evaluation with threshold-based promotion. Integrated AWS S3 for model registry, Dockerized services, and automated CI/CD using GitHub Actions with deployment on EC2.
-                    </span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools">
-                    <strong>Tools Used:</strong> Python, scikit-learn, FastAPI, Flask, MongoDB Atlas, AWS (S3, EC2, ECR, IAM), Docker, GitHub Actions
-                </p>
-                <div class="project-links">
-                    <!-- <a href="http://44.200.173.215:5000/" class="btn live-btn btn-primary">Live Demo</a> -->
-                    <a href="https://github.com/ArpitaMallik/MLOps-Vehicle-Insurance-Domain" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
+    <!-- IMAGE VIEWER -->
+    <div class="gallery-overlay" id="galleryOverlay">
+        <div class="gallery-content">
+            <img id="gallery-image" src="" alt="Project screenshot">
+            <button class="gallery-close" type="button" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <button class="gallery-prev" type="button" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+            <button class="gallery-next" type="button" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
         </div>
-        
-        <!-- Project 1 -->
-         <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">ChatPDF: RAG-based PDF Chatbot</h4>
-                <p class="project-desc">
-                    Developed a chatbot capable of answering questions by retrieving relevant information from uploaded PDFs.
-                    <span class="more-text">Uses Retrieval-Augmented Generation (RAG) with vector search for context-aware QA.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, Streamlit, FastAPI, FAISS, Google Generative AI</p>
-                <div class="project-links">
-                    <a href="https://chatpdf-using-langchain-ch9am4nnyzryzajc9v6vg2.streamlit.app/" class="btn live-btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/ArpitaMallik/ChatPDF-Conversational-PDF-Assistant" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project 9 -->
-        <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Container Job Orchestrator</h4>
-                <p class="project-desc">
-                    Built a real-time distributed job execution platform using Redis queues and Docker-based workers.
-                    <span class="more-text">
-                        Supports asynchronous job dispatch, containerized execution, real-time log streaming via WebSockets and Redis Pub/Sub, and PostgreSQL persistence—demonstrating production-ready backend architecture applicable to LLM serving pipelines.
-                    </span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, FastAPI, Redis, PostgreSQL, Docker, WebSockets</p>
-                <div class="project-links">
-                    <a href="https://github.com/ArpitaMallik/Container-Job-Orchestration" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 10 -->
-        <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Stress Monitoring Pipeline</h4>
-                <p class="project-desc">
-                    Developed a real-time monitoring and load-testing pipeline for FastAPI applications.
-                    <span class="more-text">
-                        Instrumented Prometheus metrics, Grafana dashboards, Docker-based deployment, and configurable k6 load testing to monitor request throughput, P95/P99 latency, availability, and automated metric collection every 3 seconds.
-                    </span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, FastAPI, Prometheus, Grafana, k6, Docker</p>
-                <div class="project-links">
-                    <a href="https://github.com/ArpitaMallik/Stress-Monitoring-using-Prometheus-and-Grafana" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-        
-
-        <!-- Project 2 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Movie Recommendation System</h4>
-                <p class="project-desc">
-                    A web app that recommends movies based on user preferences using collaborative filtering techniques.
-                    <span class="more-text">Integrates TMDb API to fetch movie posters and descriptions. Built with Streamlit for easy deployment.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, Streamlit</p>
-                <div class="project-links">
-                    <a href="https://movie-recommendation-system-gbakkxhddvvwptzkrwvvlt.streamlit.app/" class="btn live-btn btn-primary">Live Demo</a>
-                    <a href="https://github.com/ArpitaMallik/Movie-Recommendation-System" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Project 3 -->
-         <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Cyberbullying Detection App</h4>
-                <p class="project-desc">
-                    Built a Flask app to detect cyberbullying in social media text using machine learning models.
-                    <span class="more-text">The app classifies input text to identify bullying behavior. Deployed using Flask for real-time predictions.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, Flask, HTML5, CSS</p>
-                <div class="project-links">
-                    <button class="btn live-btn btn-primary open-gallery" data-images="images\cyber bullying detection app.png">Gallery</button>
-                    <a href="https://github.com/ArpitaMallik/Cyber-Bullying-Detection-App" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-         -->
-
-        <!-- Project 4 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Boston House Price Prediction</h4>
-                <p class="project-desc">
-                    Created an end-to-end ML pipeline for predicting house prices with a user-friendly Flask interface.
-                    <span class="more-text">Includes Dockerized deployment and integration with version control tools.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, Flask, Docker, Git, GitHub</p>
-                <div class="project-links">
-                    <a href="https://github.com/ArpitaMallik/Boston-House-Price-Prediction" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Project 5 -->
-        <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Medical Insurance Charges Prediction</h4>
-                <p class="project-desc">
-                    Built a prediction model for medical insurance charges integrated into a FastAPI backend.
-                    <span class="more-text">Uses XGBoost for regression and features a simple web UI for interaction.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Python, FastAPI, XGBoost, HTML, JavaScript</p>
-                <div class="project-links">
-                    <button class="btn live-btn btn-primary open-gallery" data-images="images\medical insurance.png">Gallery</button>
-                    <a href="https://github.com/ArpitaMallik/Medical-Insurance-Charges-Predictor" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">PowerBI Online Courses Analysis Dashboard</h4>
-                <p class="project-desc">
-                    Analyzed online course data and created interactive dashboards using Power BI.
-                    <span class="more-text">Highlights key insights about course types, categories, and user preferences.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Microsoft Power BI</p>
-                <div class="project-links">
-                    <button class="btn live-btn btn-primary open-gallery" data-images="images\powerbi online course.png">Gallery</button>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Project 7 -->
-        <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">CUET Thesis & Project Portal</h4>
-                <p class="project-desc">
-                    Developed a portal for CUET students to manage thesis and project workflows.
-                    <span class="more-text">Supports student and teacher logins, project uploads, and document sharing.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> React JS, Firebase</p>
-                <div class="project-links">
-                    <a href="https://github.com/ArpitaMallik/CUET-Thesis-and-Project-Portal" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 8 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">TuitionEase</h4>
-                <p class="project-desc">
-                    Contributed to a tuition management web system for students and teachers.
-                    <span class="more-text">Manages tuition schedules, student lists, and communication tools.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-                <div class="project-links">
-                    <a href="https://github.com/TuitionEase/TuitionEase" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Project 9 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">ZenSpace – Meditation Based Software</h4>
-                <p class="project-desc">
-                    Built a meditation software with Java Swing and MySQL for data management.
-                    <span class="more-text">Includes guided session tracking and user account management.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> Java Swing, MySQL</p>
-                <div class="project-links">
-                    <a href="https://github.com/Team-Nirvana-ZenSpace/ZenSpace" class="btn btn-outline-secondary git-btn">GitHub</a>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Project 10 -->
-        <!-- <div class="col-md-6">
-            <div class="project-card">
-                <h4 class="project-title">Green Lead Official Website</h4>
-                <p class="project-desc">
-                    Designed and maintained the company’s official website built on WordPress.
-                    <span class="more-text">Focused on responsive UI, SEO optimization, and content management.</span>
-                    <button class="more-btn">More...</button>
-                </p>
-                <p class="project-tools"><strong>Tools Used:</strong> WordPress</p>
-                <div class="project-links">
-                    <a href="https://greenleadglobal.org/" class="btn btn-outline-secondary git-btn">Website</a>
-                </div>
-            </div>
-        </div> -->
-
     </div>
-</div>
-
-
-         <!-- PROJECTS SECTION ENDS -->
-
-
-
-
-        <!-- PUBLICATIONS SECTION-->
-
-        <div class="pub-container" id="publications">
-            <h2 class="headline">Publications</h2>
-            <div class="pub-list">
-
-
-                 <div class="pub-item">
-                    <div class="pub-title">
-                        Assessing the Reliability of Large Language Models in the Bengali Legal Context: A Comparative Evaluation Using LLM-as-Judge and Legal Experts
-                    </div>
-                    <!-- <div class="pub-authors">
-                        Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib, Samia Rahman, Hasan Murad
-                    </div> -->
-                    <div class="pub-venue">
-                        arXiv · Nov 7, 2025
-                    </div>
-                    <a class="pub-link" href="https://arxiv.org/abs/2511.05627" target="_blank">
-                        View Paper
-                    </a>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-title">
-                        CUET-823@DravidianLangTech 2025: Shared Task on Multimodal Misogyny Meme Detection in Tamil Language
-                    </div>
-                    <!-- <div class="pub-authors">
-                        Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib, Samia Rahman, Hasan Murad
-                    </div> -->
-                    <div class="pub-venue">
-                        ACL Anthology · May 3, 2025
-                    </div>
-                    <a class="pub-link" href="https://aclanthology.org/2025.dravidianlangtech-1.57/" target="_blank">
-                        View Paper
-                    </a>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-title">
-                        823-OLT @ BUET DL Sprint 4.0: Context-Aware Windowing for ASR and Fine-Tuned Speaker Diarization in Bengali Long Form Audio
-                    </div>
-                    <!-- <div class="pub-authors">
-                        Arpita Mallik, Ratnajit Dhar, Udoy Das, Momtazul Arefin Labib, Samia Rahman, Hasan Murad
-                    </div> -->
-                    <div class="pub-venue">
-                        arXiv · Feb 5, 2026
-                    </div>
-                    <a class="pub-link" href="https://arxiv.org/abs/2602.21183" target="_blank">
-                        View Paper
-                    </a>
-                </div>
-
-                <div class="pub-item">
-                    <div class="pub-title">
-                        CUET-823 at MAHED 2025 Shared Task: Large Language Model-Based Framework for Emotion, Offensive, and Hate Detection in Arabic
-                    </div>
-                    <!-- <div class="pub-authors">
-                        Ratnajit Dhar, Arpita Mallik
-                    </div> -->
-                    <div class="pub-venue">
-                        ACL Anthology · Nov 9, 2025
-                    </div>
-                    <a class="pub-link" href="https://aclanthology.org/2025.arabicnlp-sharedtasks.84/" target="_blank">
-                        View Paper
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- PUBLICATIONS SECTION ENDS-->
-
-
-
-
-        <!--Honors and Awards-->
-
-        <div class="achievements-container" id="achievements">
-            <h2 class="headline">Achievements</h2>
-
-            <div class="achievements-list">
-
-                <div class="achievement-item">
-                    <div class="achievement-card">
-                        <div class="achievement-title">
-                            Finalist – DL Sprint 4.0 (BUET CSE Fest 2026)
-                        </div>
-                        <div class="achievement-desc">
-                            Ranked among Top 10% teams out of 192 in a nationwide deep learning competition on Bangla long-form speech recognition and speaker diarization.
-                            Built a pipeline using Whisper-based ASR and diarization models to handle Bengali long-duration audio and speaker segmentation.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="achievement-item">
-                    <div class="achievement-card">
-                        <div class="achievement-title">
-                            Champion – NodeScape Hackathon (CUET Computer Club, 2025)
-                        </div>
-                        <div class="achievement-desc">
-                            Secured 1st place in a 3-phase hackathon. Developed an end-to-end AI system including algorithm visualization, graph classification,
-                            and Dockerized CI/CD deployment using React, Flask, and Python.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="achievement-item">
-                    <div class="achievement-card">
-                        <div class="achievement-title">
-                            Finalist – Intra CUET ML Contest (IEEE CS CUET SB, 2025)
-                        </div>
-                        <div class="achievement-desc">
-                            Built LLM-based models for solving Bengali physics problems, focusing on reasoning in low-resource language settings
-                            to improve educational accessibility.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <!--Honors and Awards ENDS-->
-
-
-
-
-        <!-- BEYOND RESEARCH / MISCELLANEOUS -->
-
-        <div class="misc-container" id="misc">
-            <h2 class="headline">Beyond Research</h2>
-
-            <div class="misc-card">
-                <p class="misc-text">
-                    A little something beyond research: I enjoy singing and occasionally picking up my guitar.
-                    I also have a small YouTube channel where I share some of my music.
-                    Here&rsquo;s the link if you&rsquo;d like to have a listen!
-                </p>
-
-                <a class="misc-link" href="https://www.youtube.com/@arpita_mallik" target="_blank" rel="noopener">
-                    <i class="bi bi-youtube"></i> My YouTube Channel
-                </a>
-            </div>
-        </div>
-
-        <!-- BEYOND RESEARCH ENDS -->
-
-
-
-
-
-         <!-- CONTACT -->
-         <div class="contactus reveal" id="contact">
-            <h3 class="headline contact-headline">Get In Touch</h3>
-
-            <div class="cont-box">
-                <!-- Form Section -->
-                <div class="cont form">
-                    <h3 class="form-title">Send a Message</h3>
-
-                    <form>
-                        <div class="formBox">
-                            <div class="row50">
-                                <div class="inputBox">
-                                    <span>First Name</span>
-                                    <input type="text" placeholder="Enter your first name">
-                                </div>
-                                <div class="inputBox">
-                                    <span>Last Name</span>
-                                    <input type="text" placeholder="Enter your last name">
-                                </div>
-                            </div>
-
-                            <div class="row50">
-                                <div class="inputBox">
-                                    <span>Email</span>
-                                    <input type="email" placeholder="Enter your email">
-                                </div>
-                                <div class="inputBox">
-                                    <span>Mobile</span>
-                                    <input type="text" placeholder="Enter your phone number">
-                                </div>
-                            </div>
-
-                            <div class="row100">
-                                <div class="inputBox">
-                                    <span>Message</span>
-                                    <textarea placeholder="Write your message here"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="row100">
-                                <div class="inputBox">
-                                    <input type="submit" value="Send Message" class="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="cont info">
-                    <h3>Contact Info</h3>
-
-                    <div class="infoBox">
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="https://img.icons8.com/?size=100&id=13800&format=png&color=000000" alt="Location">
-                            </span>
-                            <p>SNK Hall, CUET, Chattogram, Bangladesh</p>
-                        </div>
-
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="https://img.icons8.com/?size=100&id=OumT4lIcOllS&format=png&color=000000" alt="Email">
-                            </span>
-                            <a href="mailto:arpitamallik13@gmail.com">arpitamallik13@gmail.com</a>
-                        </div>
-
-                        <div class="info-item">
-                            <span class="info-icon">
-                                <img src="https://img.icons8.com/?size=100&id=s8njAvhz1dML&format=png&color=000000" alt="Phone">
-                            </span>
-                            <a href="tel:+8801552398872">+880-1552398872</a>
-                        </div>
-                    </div>
-
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.367788642792!2d91.97189211469315!3d22.46506173308736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad2fc2d9241b1f%3A0xaded3a419a88b456!2sShamshen%20Nahar%20Khan%20Hall!5e0!3m2!1sen!2sbd!4v1699556432128!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-         <!-- CONTACT ENDS -->
-        
-
-
-
-
-        <!-- SOCIAL MEDIA SECTION -->
-
-       <footer class="footer">
-            <div class="footer-socials">
-                <a href="https://www.facebook.com/arpita.mallik.13/" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-                <a href="https://www.instagram.com/arpita_mallik/?fbclid=IwAR2qvhz4a0_O2zAc5YsnkpaBZN7t6sNYSwqXBdTsjq0OmDrxunbI4dqb4X8" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-                <a href="https://github.com/ArpitaMallik" target="_blank" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/in/arpita-mallik-993804239/" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-            </div>
-
-            <div class="footer-copy">
-                <p>&copy; 2023 Arpita Mallik. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <!-- SOCIAL MEDIA SEC ENDS HERE -->
-    </div>
+    <!-- IMAGE VIEWER END -->
 
     <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d334581bb2.js" crossorigin="anonymous"></script>
 </body>
 </html>

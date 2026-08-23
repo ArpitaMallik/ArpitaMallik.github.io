@@ -1,10 +1,17 @@
-/* DAY / NIGHT MODE */
+/* ============================================================
+   DAY / NIGHT MODE
+   Day is the default; the choice is remembered between visits.
+   ============================================================ */
+
 (function () {
     const body = document.body;
+    const saved = localStorage.getItem("theme");
 
-    // apply the saved choice as early as possible
-    if (localStorage.getItem("theme") === "light") {
-        body.classList.add("light-mode");
+    // saved choice wins; otherwise follow the operating system setting
+    if (saved === "dark") {
+        body.classList.add("dark-mode");
+    } else if (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        body.classList.add("dark-mode");
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -14,17 +21,17 @@
         const themeIcon = themeBtn.querySelector("i");
 
         function syncButton() {
-            const isLight = body.classList.contains("light-mode");
-            // show a sun while it's night (click to get day), a moon while it's day
-            themeIcon.className = isLight ? "bi bi-moon-stars-fill" : "bi bi-sun-fill";
-            const label = isLight ? "Switch to night mode" : "Switch to day mode";
+            const isDark = body.classList.contains("dark-mode");
+            // a sun while it is night (click for day), a moon while it is day
+            themeIcon.className = isDark ? "bi bi-brightness-high" : "bi bi-moon";
+            const label = isDark ? "Switch to day mode" : "Switch to night mode";
             themeBtn.setAttribute("title", label);
             themeBtn.setAttribute("aria-label", label);
         }
 
         themeBtn.addEventListener("click", function () {
-            body.classList.toggle("light-mode");
-            localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
+            body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", body.classList.contains("dark-mode") ? "dark" : "light");
             syncButton();
         });
 
@@ -33,118 +40,113 @@
 })();
 
 
-const sections  = document.querySelectorAll(".section");
-const allSec = document.querySelector(".main-content");
-
-window.addEventListener('scroll',reveal);
-
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-
-            for(var i=0; i<reveals.length; i++)
-            {
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 150;
-
-                if(revealtop < windowheight-revealpoint)
-                {
-                    reveals[i].classList.add('active');
-                }
-                else{
-                    reveals[i].classList.remove('active');
-                }
-            }
-        }
-
-const spans = document.querySelectorAll(".progress-bar span");
-
-spans.forEach((span) =>{
-    span.style.width = span.dataset.width;
-    span.innerHTML = span.dataset.width;
-})
-
+/* ============================================================
+   MOBILE NAVIGATION
+   ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("toggleText");
-    const collapseEl = document.getElementById("demo");
+    const navToggle = document.getElementById("navToggle");
+    const siteNav = document.getElementById("siteNav");
+    if (!navToggle || !siteNav) return;
 
-    collapseEl.addEventListener("shown.bs.collapse", function () {
-        toggle.textContent = "See Less";
+    function setOpen(open) {
+        siteNav.classList.toggle("open", open);
+        navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        navToggle.querySelector("i").className = open ? "bi bi-x" : "bi bi-list";
+    }
+
+    navToggle.addEventListener("click", function () {
+        setOpen(!siteNav.classList.contains("open"));
     });
 
-    collapseEl.addEventListener("hidden.bs.collapse", function () {
-        toggle.textContent = "Learn More";
+    // close the menu once a section has been chosen
+    siteNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            setOpen(false);
+        });
     });
 });
 
 
-
+/* ============================================================
+   EXPANDABLE PROJECT DESCRIPTIONS
+   ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".more-btn").forEach(button => {
-            button.addEventListener("click", function () {
-                const moreText = this.previousElementSibling;
-                if (moreText.style.display === "inline") {
-                    moreText.style.display = "none";
-                    this.textContent = "More...";
-                } else {
-                    moreText.style.display = "inline";
-                    this.textContent = "Less";
-                }
-            });
+    document.querySelectorAll(".more-btn").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const moreText = this.previousElementSibling;
+            if (!moreText) return;
+
+            const isOpen = moreText.style.display === "inline";
+            moreText.style.display = isOpen ? "none" : "inline";
+            this.textContent = isOpen ? "More" : "Less";
+        });
+    });
+});
+
+
+/* ============================================================
+   PROJECT SCREENSHOT VIEWER
+   ============================================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById("galleryOverlay");
+    const galleryImage = document.getElementById("gallery-image");
+    if (!overlay || !galleryImage) return;
+
+    const prevBtn = overlay.querySelector(".gallery-prev");
+    const nextBtn = overlay.querySelector(".gallery-next");
+    const closeBtn = overlay.querySelector(".gallery-close");
+
+    let currentImages = [];
+    let currentIndex = 0;
+
+    function showImage() {
+        if (currentImages.length === 0) return;
+        galleryImage.src = currentImages[currentIndex];
+        // the arrows are only useful when there is more than one screenshot
+        const many = currentImages.length > 1;
+        prevBtn.style.display = many ? "inline-flex" : "none";
+        nextBtn.style.display = many ? "inline-flex" : "none";
+    }
+
+    function closeGallery() {
+        overlay.style.display = "none";
+    }
+
+    document.querySelectorAll(".open-gallery").forEach(function (button) {
+        button.addEventListener("click", function () {
+            currentImages = this.getAttribute("data-images").split(",");
+            currentIndex = 0;
+            showImage();
+            overlay.style.display = "flex";
         });
     });
 
-
-
-
-
-
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const galleryOverlay = document.querySelector(".gallery-overlay");
-        const galleryImage = document.getElementById("gallery-image");
-        const prevBtn = document.querySelector(".gallery-prev");
-        const nextBtn = document.querySelector(".gallery-next");
-        const closeBtn = document.querySelector(".gallery-close");
-    
-        let currentImages = [];
-        let currentIndex = 0;
-    
-        document.querySelectorAll(".open-gallery").forEach(button => {
-            button.addEventListener("click", function () {
-                currentImages = this.getAttribute("data-images").split(",");
-                currentIndex = 0;
-                updateGalleryImage();
-                galleryOverlay.style.display = "flex";
-            });
-        });
-    
-        function updateGalleryImage() {
-            if (currentImages.length > 0) {
-                galleryImage.src = currentImages[currentIndex];
-            }
+    prevBtn.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showImage();
         }
-    
-        prevBtn.addEventListener("click", function () {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateGalleryImage();
-            }
-        });
-    
-        nextBtn.addEventListener("click", function () {
-            if (currentIndex < currentImages.length - 1) {
-                currentIndex++;
-                updateGalleryImage();
-            }
-        });
-    
-        closeBtn.addEventListener("click", function () {
-            galleryOverlay.style.display = "none";
-        });
     });
-    
+
+    nextBtn.addEventListener("click", function () {
+        if (currentIndex < currentImages.length - 1) {
+            currentIndex++;
+            showImage();
+        }
+    });
+
+    closeBtn.addEventListener("click", closeGallery);
+
+    // click outside the image, or press Escape, to dismiss
+    overlay.addEventListener("click", function (event) {
+        if (event.target === overlay) closeGallery();
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeGallery();
+    });
+});

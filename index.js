@@ -1,3 +1,38 @@
+/* DAY / NIGHT MODE */
+(function () {
+    const body = document.body;
+
+    // apply the saved choice as early as possible
+    if (localStorage.getItem("theme") === "light") {
+        body.classList.add("light-mode");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const themeBtn = document.getElementById("themeToggle");
+        if (!themeBtn) return;
+
+        const themeIcon = themeBtn.querySelector("i");
+
+        function syncButton() {
+            const isLight = body.classList.contains("light-mode");
+            // show a sun while it's night (click to get day), a moon while it's day
+            themeIcon.className = isLight ? "bi bi-moon-stars-fill" : "bi bi-sun-fill";
+            const label = isLight ? "Switch to night mode" : "Switch to day mode";
+            themeBtn.setAttribute("title", label);
+            themeBtn.setAttribute("aria-label", label);
+        }
+
+        themeBtn.addEventListener("click", function () {
+            body.classList.toggle("light-mode");
+            localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
+            syncButton();
+        });
+
+        syncButton();
+    });
+})();
+
+
 const sections  = document.querySelectorAll(".section");
 const allSec = document.querySelector(".main-content");
 

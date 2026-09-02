@@ -1,5 +1,5 @@
 /* ============================================================
-   Arpita Mallik — academic portfolio
+   Arpita Mallik: academic portfolio
    Light (day) theme is the default; body.dark-mode is the night theme.
    ============================================================ */
 
@@ -8,7 +8,7 @@
     --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
     --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-    /* day palette — warm paper with a violet cast */
+    /* day palette: warm paper with a violet cast */
     --bg: #fbfaff;
     --bg-tint: #f4f0fb;
     --surface: #ffffff;
@@ -1095,18 +1095,15 @@ body::before {
 .btn-primary {
     border-radius: 999px;
     padding: 10px 24px;
-    background: var(--accent-grad);
-    border-color: transparent;
+    background: var(--accent);
+    border-color: var(--accent);
     color: #ffffff;
-    box-shadow: 0 6px 18px -8px var(--accent);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .btn-primary:hover {
     color: #ffffff;
-    opacity: 1;
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px -8px var(--accent);
+    opacity: 0.88;
 }
 
 .intro-links a {
@@ -1126,11 +1123,6 @@ body::before {
     margin-left: -14px;
     margin-right: -14px;
     border-radius: 8px;
-    transition: background 0.2s ease;
-}
-
-.interest-list li:hover {
-    background: var(--accent-softer);
 }
 
 .interest-term {
@@ -1157,7 +1149,6 @@ body::before {
     padding: 4px 14px 4px 52px;
     margin: 0 -14px;
     border-radius: 10px;
-    transition: background 0.2s ease;
 }
 
 .pub-item::before {
@@ -1167,9 +1158,6 @@ body::before {
     color: var(--accent);
 }
 
-.pub-item:hover {
-    background: var(--accent-softer);
-}
 
 .pub-authors .me {
     color: var(--accent-deep);
@@ -1204,37 +1192,8 @@ body::before {
     margin-left: -18px;
     margin-right: -14px;
     border-radius: 10px;
-    transition: background 0.22s ease;
 }
 
-.project::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 22px;
-    bottom: 22px;
-    width: 3px;
-    border-radius: 3px;
-    background: var(--accent-grad);
-    opacity: 0;
-    transition: opacity 0.22s ease;
-}
-
-.project:hover {
-    background: var(--accent-softer);
-}
-
-.project:hover::before {
-    opacity: 1;
-}
-
-.project-title {
-    transition: color 0.2s ease;
-}
-
-.project:hover .project-title {
-    color: var(--accent-deep);
-}
 
 .more-btn {
     color: var(--accent);
@@ -1249,11 +1208,6 @@ body::before {
     margin-left: -14px;
     margin-right: -14px;
     border-radius: 10px;
-    transition: background 0.2s ease;
-}
-
-.entry:hover {
-    background: var(--accent-softer);
 }
 
 .entry-date {
@@ -1278,12 +1232,6 @@ body::before {
     margin-left: -14px;
     margin-right: -14px;
     border-radius: 8px;
-    transition: background 0.2s ease;
-}
-
-.skill-row:hover,
-.contact-row:hover {
-    background: var(--accent-softer);
 }
 
 .skill-row dt,

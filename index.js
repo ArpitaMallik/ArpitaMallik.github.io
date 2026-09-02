@@ -7,10 +7,8 @@
     const body = document.body;
     const saved = localStorage.getItem("theme");
 
-    // saved choice wins; otherwise follow the operating system setting
+    // light is the default; only a saved choice of "dark" switches it
     if (saved === "dark") {
-        body.classList.add("dark-mode");
-    } else if (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches) {
         body.classList.add("dark-mode");
     }
 

@@ -982,22 +982,6 @@ button {
    Accent detailing layered on top of the base type + layout.
    ============================================================ */
 
-/* --- ambient wash ------------------------------------------------------ */
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 620px;
-    z-index: -1;
-    pointer-events: none;
-    background:
-        radial-gradient(900px 420px at 12% -8%, var(--accent-soft), transparent 65%),
-        radial-gradient(680px 380px at 92% 2%, var(--accent-softer), transparent 70%);
-}
-
 ::selection {
     background: var(--accent-soft);
     color: var(--text);
@@ -1035,17 +1019,6 @@ body::before {
     box-shadow: 0 1px 0 var(--accent-softer);
 }
 
-.brand::after {
-    content: "";
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    margin-left: 7px;
-    border-radius: 50%;
-    background: var(--accent-bright);
-    vertical-align: 2px;
-}
-
 .site-nav a::after {
     height: 2px;
     border-radius: 2px;
@@ -1065,15 +1038,6 @@ body::before {
     align-items: center;
     gap: 12px;
     color: var(--accent);
-}
-
-.section-title::before {
-    content: "";
-    flex: none;
-    width: 24px;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--accent-grad);
 }
 
 
@@ -1343,7 +1307,6 @@ body::before {
 /* --- print: drop the color --------------------------------------------- */
 
 @media print {
-    body::before,
     .project::before,
     .site-footer::before {
         display: none !important;

@@ -1,8 +1,3 @@
-/* ============================================================
-   Arpita Mallik: academic portfolio
-   Light (day) theme is the default; body.dark-mode is the night theme.
-   ============================================================ */
-
 :root {
     /* type */
     --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -612,6 +607,28 @@ button {
 .entry-note {
     font-size: 14.5px;
     color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.entry-bullets {
+    /* the global ul/ol reset drops markers; bring them back here */
+    list-style: disc outside;
+    margin: 0;
+    padding-left: 19px;
+    font-size: 14.5px;
+    color: var(--text-muted);
+}
+
+.entry-bullets li {
+    margin-bottom: 6px;
+    padding-left: 3px;
+}
+
+.entry-bullets li::marker {
+    color: var(--accent);
+}
+
+.entry-bullets li:last-child {
     margin-bottom: 0;
 }
 
@@ -1304,7 +1321,6 @@ button {
 }
 
 
-/* --- print: drop the color --------------------------------------------- */
 
 @media print {
     .project::before,

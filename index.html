@@ -33,6 +33,7 @@
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="#publications">Publications</a>
+                <a href="#thesis">Thesis</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#awards">Awards</a>
@@ -289,9 +290,56 @@ Diarization
 <!-- CURRENTLY IN PROGRESS END -->
 
 
+
+        <!-- THESIS -->
+        <section class="section" id="thesis">
+            <h2 class="section-title">Undergraduate Thesis</h2>
+
+            <div class="entry-list">
+
+                <div class="entry">
+                    <div class="entry-date">2025 &ndash; 2026</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">
+                            An Emotion-Aware LLM Question-Answering System for Women&rsquo;s
+                            Healthcare Information in Bangla
+                        </h3>
+                        <p class="entry-org">
+                            B.Sc. thesis, Chittagong University of Engineering and Technology &middot;
+                            Supervised by Sabiha Anan
+                        </p>
+                        <ul class="entry-bullets">
+                            <li>
+                                Developed a ~2,500-pair Bangla and Banglish women&rsquo;s health QA dataset
+                                across eight topics, with questions labeled neutral or concerned.
+                            </li>
+                            <li>
+                                Fine-tuned Gemma-2-9B with QLoRA and compared baseline, LoRA, and
+                                Feature-wise Linear Modulation (FiLM) + LoRA, where FiLM conditions
+                                decoder hidden states on BanglaBERT-predicted emotion labels.
+                            </li>
+                            <li>
+                                Tested whether emotional framing causes sycophantic stance changes.
+                                Both fine-tuned models roughly halved stance-flip rates compared with
+                                zero-shot prompting, with results replicated on an independent probe set.
+                            </li>
+                            <li>
+                                FiLM showed no significant advantage over LoRA for sycophancy resistance,
+                                but provided better tone control. Evaluation also revealed limitations in
+                                BERTScore and standard ROUGE/BLEU scoring for Bengali text.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- THESIS END -->
+
+
         <!-- PROJECTS -->
         <section class="section" id="projects">
-            <h2 class="section-title">Selected Projects</h2>
+            <h2 class="section-title">Projects</h2>
 
             <div class="project-list">
 
@@ -497,11 +545,11 @@ Diarization
                 </div>
                 <div class="skill-row">
                     <dt>ML and NLP</dt>
-                    <dd>PyTorch, HuggingFace Transformers, scikit-learn, LoRA / QLoRA fine-tuning, text classification, sequence modelling, model evaluation</dd>
+                    <dd>PyTorch, scikit-learn, LoRA / QLoRA fine-tuning, model evaluation</dd>
                 </div>
                 <div class="skill-row">
                     <dt>LLM Systems</dt>
-                    <dd>LangChain, retrieval-augmented generation, prompt engineering, semantic search and embeddings</dd>
+                    <dd>retrieval-augmented generation, prompt engineering, semantic search and embeddings</dd>
                 </div>
                 <div class="skill-row">
                     <dt>Vector Stores</dt>
@@ -509,7 +557,7 @@ Diarization
                 </div>
                 <div class="skill-row">
                     <dt>Systems and Deployment</dt>
-                    <dd>FastAPI, Flask, Docker, AWS (EC2, S3, ECR), PostgreSQL, Redis, WebSockets</dd>
+                    <dd>FastAPI, Docker, AWS (EC2, S3)</dd>
                 </div>
                 <div class="skill-row">
                     <dt>MLOps and Tooling</dt>

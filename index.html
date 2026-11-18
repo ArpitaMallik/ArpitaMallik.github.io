@@ -81,7 +81,7 @@
                     and have meaningful benefits for people, particularly in healthcare and underserved
                     language communities. I hope to pursue research that not only advances AI capabilities
                     but also makes these technologies more reliable and useful in people's lives. Check out my CV for more on my ongoing research and projects. -->
-                    I'm interested in building AI systems that are reliable and actually useful for people, especially in healthcare and underserved language communities. My focus is on large language models and making them safer and more trustworthy for real world, high stakes use. You can check out my CV for more on my ongoing research and projects.
+                    I am Arpita Mallik, a recent Computer Science and Engineering graduate from CUET. I study why AI models behave the way they do: why they get some answers right, why they fail on others, and why they sometimes give up an answer they already know. I want to use that understanding to build models people can trust, especially in healthcare and in languages like Bangla that most models are not built for. You can find my ongoing work in my CV.
                 </p>
                 <p class="intro-actions">
                     <a class="btn-primary" href="https://drive.google.com/file/d/1EABk3EopGjP3kfx7bbOKcUs4R_DwOvuz/view?usp=drive_link" target="_blank" rel="noopener">Curriculum Vitae</a>
@@ -105,30 +105,37 @@
         <section class="section" id="research">
             <h2 class="section-title">Research Interests</h2>
 
-           <p class="section-lede">
-    I am interested in making large language models dependable outside the high-resource
-    settings they are usually built and benchmarked for.
+<p class="section-lede">
+    I want to understand what happens inside a model when it succeeds or fails,
+    and turn that into better ways to test and fix it.
 </p>
 
-<ul class="interest-list"> 
-    <li> 
-        <span class="interest-term">Large Language Models</span> 
-        <span class="interest-desc">Exploring how LLMs learn, reason, and adapt to different tasks and settings.</span> 
-    </li> 
-    <li> 
-        <span class="interest-term">Trustworthy AI</span> 
-        <span class="interest-desc">Understanding how to make AI systems more reliable, transparent, and dependable.</span> 
-    </li> 
+<ul class="interest-list">
+    <li>
+        <span class="interest-term">Model Behavior &amp; Interpretability</span>
+        <span class="interest-desc">What models represent inside, and how that makes them right or wrong.</span>
+    </li>
 
-    <li> 
-        <span class="interest-term">AI for Healthcare</span> 
-        <span class="interest-desc">Exploring how AI can be applied to healthcare and help address real-world healthcare needs.</span> 
-    </li> 
-    
-    <li> 
-        <span class="interest-term">Low-Resource Settings</span> 
-        <span class="interest-desc">Building AI systems for languages and domains where data and resources are limited.</span> 
-    </li> 
+    <li>
+        <span class="interest-term">Trustworthy AI</span>
+        <span class="interest-desc">Why models give up a correct answer under pressure, and how to make them more reliable.</span>
+    </li>
+
+      </li>
+
+       <li>
+        <span class="interest-term">Meaningful Evaluation</span>
+        <span class="interest-desc">Whether our metrics measure real correctness or only surface quality.</span>
+    </li>
+
+    <li>
+        <span class="interest-term">High Stakes Domains &amp; Low Resource Languages</span>
+        <span class="interest-desc">Healthcare, law, and Bangla, where these failures matter most and where most of my work is.</span>
+    </li>
+
+   
+  
+</ul>
     
 </ul>
         </section>
@@ -160,7 +167,7 @@
                     </p>
                 </li>
 
-                
+
                 <li class="pub-item">
                     <p class="pub-title">
                         CUET-823 at SemEval-2026 Task 9: LoRA-Based Instruction Fine-Tuning of LLMs
@@ -171,7 +178,7 @@
                         <span class="me">Arpita Mallik</span>, Ratnajit Dhar
                     </p>
                     <p class="pub-venue">
-                        <span class="venue-name">SemEval 2026 (ACL Anthology)</span> · July 2026
+                        <span class="venue-name">SemEval 2026 (ACL Anthology)</span> · 2026
                         <a class="pub-link" href="https://aclanthology.org/2026.semeval-1.154/" target="_blank" rel="noopener">Paper</a>
                     </p>
                 </li>
@@ -223,9 +230,9 @@
                         Safety Judgments with Hazard-to-Twin Morphs
                         <span class="pub-tag pub-tag-pending">Under review</span>
                     </p>
-                    <p class="pub-authors">
-                        <span class="me">Arpita Mallik</span>, et al.
-                    </p>
+                    <!-- <p class="pub-authors">
+                        Md Kishor Morol, Bidyarthi Paul, <span class="me">Arpita Mallik</span>
+                    </p> -->
                     <p class="pub-description">
                         Introduces VLM-DeceptBench, a benchmark that measures how much visual evidence
                         a user's pressure is worth to a vision language model in safety judgments.
@@ -283,8 +290,7 @@
                     <div class="entry-date">2025 &ndash; 2026</div>
                     <div class="entry-body">
                         <h3 class="entry-title">
-                            An Emotion-Aware LLM Question-Answering System for Women&rsquo;s
-                            Healthcare Information in Bangla
+                           When High Scores Mislead: Evaluating Trust in Bangla Women’s Health Question Answering
                         </h3>
                         <p class="entry-org">
                             B.Sc. thesis, Chittagong University of Engineering and Technology &middot;
@@ -292,23 +298,19 @@
                         </p>
                         <ul class="entry-bullets">
                             <li>
-                                Developed a ~2,500-pair Bangla and Banglish women&rsquo;s health QA dataset
-                                across eight topics, with questions labeled neutral or concerned.
+                                Built a dataset of 3,002 Bangla and Banglish women&rsquo;s health
+                                questions and answers across eight topics, each labeled neutral or concerned.
                             </li>
                             <li>
-                                Fine-tuned Gemma-2-9B with QLoRA and compared baseline, LoRA, and
-                                Feature-wise Linear Modulation (FiLM) + LoRA, where FiLM conditions
-                                decoder hidden states on BanglaBERT-predicted emotion labels.
+                                Fine tuned Gemma-2-9B with QLoRA and tried FiLM layers to condition answers
+                                on the user&rsquo;s emotion. FiLM did not beat simple prompting.
                             </li>
                             <li>
-                                Tested whether emotional framing causes sycophantic stance changes.
-                                Both fine-tuned models roughly halved stance-flip rates compared with
-                                zero-shot prompting, with results replicated on an independent probe set.
+                                Across seven fine tuned models, found that BERTScore barely tells right
+                                answers from wrong ones. 12% of top scoring answers were judged incorrect.
                             </li>
                             <li>
-                                FiLM showed no significant advantage over LoRA for sycophancy resistance,
-                                but provided better tone control. Evaluation also revealed limitations in
-                                BERTScore and standard ROUGE/BLEU scoring for Bengali text.
+                                Validated the GPT judge against a doctor&rsquo;s ratings (&kappa; = 0.61).
                             </li>
                         </ul>
                     </div>

@@ -445,6 +445,19 @@ button {
     color: var(--text);
 }
 
+.section-intro {
+    font-style: italic;
+    margin-bottom: 26px;
+}
+
+.pub-list-mentored .pub-item {
+    padding-left: 46px;
+}
+
+.pub-list-mentored .pub-item::before {
+    content: "[S." counter(pub) "]";
+}
+
 .pub-tag {
     display: inline-block;
     vertical-align: 2px;
@@ -600,7 +613,7 @@ button {
 
 .entry {
     display: grid;
-    grid-template-columns: 130px 1fr;
+    grid-template-columns: 180px 1fr;
     gap: 24px;
     padding: 20px 0;
     border-bottom: 1px solid var(--rule);

@@ -253,8 +253,7 @@ body.dark-mode .header-inner {
     counter-increment: sec;
 }
 
-/* "01  Research Interests ————" : a small index number, the title in
-   sentence case, and a rule that fades out to the right */
+/* "01  Research Interests": a small index number, then the title */
 .section-title {
     display: flex;
     align-items: baseline;
@@ -276,15 +275,6 @@ body.dark-mode .header-inner {
     letter-spacing: 0.08em;
     font-variant-numeric: tabular-nums;
     color: var(--accent);
-}
-
-.section-title::after {
-    content: "";
-    flex: 1;
-    min-width: 24px;
-    height: 1px;
-    align-self: center;
-    background: linear-gradient(to right, var(--accent-line), transparent);
 }
 
 .section-lede {

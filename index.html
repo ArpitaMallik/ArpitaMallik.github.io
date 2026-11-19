@@ -33,8 +33,8 @@
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="#experience">Experience</a>
-                <a href="#publications">Publications</a>
                 <a href="#thesis">Thesis</a>
+                <a href="#publications">Publications</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#awards">Awards</a>
@@ -176,6 +176,35 @@
         <!-- EXPERIENCE END -->
 
 
+        <!-- THESIS -->
+        <section class="section" id="thesis">
+            <h2 class="section-title">Undergraduate Thesis</h2>
+
+            <div class="entry-list">
+
+                <div class="entry">
+                    <div class="entry-date">2025 &ndash; 2026</div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">
+                            When High Scores Mislead: Evaluating Trust in Bangla Women&rsquo;s Health
+                            Question Answering
+                        </h3>
+                        <p class="entry-org">
+                            B.Sc. thesis, CUET &middot; Supervised by Sabiha Anan
+                        </p>
+                        <p class="entry-note">
+                            Built a 3,002-question Bangla and Banglish women&rsquo;s health QA dataset and
+                            fine-tuned seven models on it. Found that BERTScore barely separates right answers
+                            from wrong ones, with 12% of top-scoring answers judged incorrect.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- THESIS END -->
+
+
         
 
 
@@ -233,19 +262,20 @@
                     </p>
                 </li>
 
-                <!-- <li class="pub-item">
+                <li class="pub-item">
                     <p class="pub-title">
                         CUET-823 at MAHED 2025 Shared Task: Large Language Model-Based Framework for
                         Emotion, Offensive, and Hate Detection in Arabic
+                        <span class="pub-tag">ArabicNLP 2025</span>
                     </p>
                     <p class="pub-authors">
                         Ratnajit Dhar, <span class="me">Arpita Mallik</span>
                     </p>
                     <p class="pub-venue">
-                        <span class="venue-name">Proceedings of ArabicNLP 2025</span>, ACL Anthology · November 2025
+                        <span class="venue-name">Proceedings of the Third Arabic NLP Conference: Shared Tasks (ArabicNLP 2025)</span>, Suzhou, China
                         <a class="pub-link" href="https://aclanthology.org/2025.arabicnlp-sharedtasks.84/" target="_blank" rel="noopener">Paper</a>
                     </p>
-                </li> -->
+                </li>
 
             </ol>
         </section>
@@ -323,6 +353,8 @@
                 writing their first research papers.
             </p>
 
+            <details class="pub-toggle">
+            <summary><span class="when-closed">Show 3 papers</span><span class="when-open">Hide papers</span></summary>
             <ol class="pub-list pub-list-mentored">
 
                 <li class="pub-item">
@@ -368,50 +400,10 @@
                 </li>
 
             </ol>
+            </details>
         </section>
         <!-- MENTORED STUDENT PUBLICATIONS END -->
 
-
-
-        <!-- THESIS -->
-        <section class="section" id="thesis">
-            <h2 class="section-title">Undergraduate Thesis</h2>
-
-            <div class="entry-list">
-
-                <div class="entry">
-                    <div class="entry-date">2025 &ndash; 2026</div>
-                    <div class="entry-body">
-                        <h3 class="entry-title">
-                           When High Scores Mislead: Evaluating Trust in Bangla Women’s Health Question Answering
-                        </h3>
-                        <p class="entry-org">
-                            B.Sc. thesis, Chittagong University of Engineering and Technology &middot;
-                            Supervised by Sabiha Anan
-                        </p>
-                        <ul class="entry-bullets">
-                            <li>
-                                Built a dataset of 3,002 Bangla and Banglish women&rsquo;s health
-                                questions and answers across eight topics, each labeled neutral or concerned.
-                            </li>
-                            <li>
-                                Fine tuned Gemma-2-9B with QLoRA and tried FiLM layers to condition answers
-                                on the user&rsquo;s emotion. FiLM did not beat simple prompting.
-                            </li>
-                            <li>
-                                Across seven fine tuned models, found that BERTScore barely tells right
-                                answers from wrong ones. 12% of top scoring answers were judged incorrect.
-                            </li>
-                            <li>
-                                Validated the GPT judge against a doctor&rsquo;s ratings (&kappa; = 0.61).
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- THESIS END -->
 
 
         <!-- PROJECTS -->
@@ -553,20 +545,13 @@
                 </div>
 
                 <div class="entry">
-                    <div class="entry-date">2018 – 2020</div>
+                    <div class="entry-date">2011 – 2020</div>
                     <div class="entry-body">
-                        <h3 class="entry-title">Higher Secondary Certificate</h3>
-                        <p class="entry-org">Cumilla Victoria College, Cumilla</p>
-                        <p class="entry-note">GPA 5.00 / 5.00</p>
-                    </div>
-                </div>
-
-                <div class="entry">
-                    <div class="entry-date">2011 – 2018</div>
-                    <div class="entry-body">
-                        <h3 class="entry-title">Secondary School Certificate</h3>
-                        <p class="entry-org">Nawab Faizunnesa Govt. Girls' High School, Cumilla</p>
-                        <p class="entry-note">GPA 5.00 / 5.00</p>
+                        <h3 class="entry-title">HSC and SSC</h3>
+                        <p class="entry-note">
+                            HSC, Cumilla Victoria College (GPA 5.00 / 5.00) &middot;
+                            SSC, Nawab Faizunnesa Govt. Girls' High School (GPA 5.00 / 5.00)
+                        </p>
                     </div>
                 </div>
 
@@ -623,7 +608,7 @@
 
 
         <!-- SKILLS -->
-        <section class="section" id="skills">
+        <!-- <section class="section" id="skills">
             <h2 class="section-title">Technical Skills</h2>
 
             <dl class="skill-list">
@@ -637,22 +622,14 @@
                 </div>
                 <div class="skill-row">
                     <dt>LLM Systems</dt>
-                    <dd>retrieval-augmented generation, prompt engineering, semantic search and embeddings</dd>
+                    <dd>RAG, prompt engineering, embeddings; FAISS, Pinecone, ChromaDB</dd>
                 </div>
                 <div class="skill-row">
-                    <dt>Vector Stores</dt>
-                    <dd>FAISS, Pinecone, ChromaDB</dd>
-                </div>
-                <div class="skill-row">
-                    <dt>Systems and Deployment</dt>
-                    <dd>FastAPI, Docker, AWS (EC2, S3)</dd>
-                </div>
-                <div class="skill-row">
-                    <dt>MLOps and Tooling</dt>
-                    <dd>MLflow, DVC, Git, GitHub Actions, CI/CD, Prometheus, Grafana</dd>
+                    <dt>Deployment and MLOps</dt>
+                    <dd>FastAPI, Docker, AWS (EC2, S3), MLflow, DVC, GitHub Actions, Prometheus, Grafana</dd>
                 </div>
             </dl>
-        </section>
+        </section> -->
         <!-- SKILLS END -->
 
 

@@ -241,7 +241,7 @@ button {
 }
 
 .section {
-    padding: 54px 0;
+    padding: 44px 0;
     border-top: 1px solid var(--rule);
 }
 
@@ -447,7 +447,57 @@ button {
 
 .section-intro {
     font-style: italic;
-    margin-bottom: 26px;
+    margin-bottom: 14px;
+}
+
+.pub-toggle > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--accent);
+    padding: 4px 12px;
+    border: 1px solid var(--accent-line);
+    border-radius: 999px;
+    user-select: none;
+}
+
+.pub-toggle > summary::-webkit-details-marker {
+    display: none;
+}
+
+.pub-toggle > summary::after {
+    content: "\25BE";
+    transition: transform 0.15s ease;
+}
+
+.pub-toggle[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.pub-toggle > summary:hover {
+    background: var(--accent-soft);
+}
+
+.pub-toggle > summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.pub-toggle .when-open,
+.pub-toggle[open] .when-closed {
+    display: none;
+}
+
+.pub-toggle[open] .when-open {
+    display: inline;
+}
+
+.pub-toggle[open] > .pub-list {
+    margin-top: 24px;
 }
 
 .pub-list-mentored .pub-item {
@@ -940,7 +990,7 @@ button {
     }
 
     .section {
-        padding: 42px 0;
+        padding: 36px 0;
     }
 
     .gallery-close {

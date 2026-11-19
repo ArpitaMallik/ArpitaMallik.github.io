@@ -86,6 +86,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* ============================================================
+   COLLAPSIBLE LISTS (mentored publications)
+   ============================================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    // a link such as "see mentored publications" opens the list it points to
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function () {
+            const id = this.getAttribute("href").slice(1);
+            const target = id && document.getElementById(id);
+            const toggle = target && target.querySelector("details.pub-toggle");
+            if (toggle) toggle.open = true;
+        });
+    });
+
+    // print every collapsed list in full
+    window.addEventListener("beforeprint", function () {
+        document.querySelectorAll("details.pub-toggle").forEach(function (d) {
+            d.open = true;
+        });
+    });
+});
+
+
+/* ============================================================
    PROJECT SCREENSHOT VIEWER
    ============================================================ */
 

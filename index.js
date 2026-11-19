@@ -68,6 +68,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* ============================================================
+   CURRENT SECTION IN THE NAVBAR
+   Sections without their own link (thesis, awards, ...) light up
+   the nearest linked section above them.
+   ============================================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const links = {};
+    document.querySelectorAll('.site-nav a[href^="#"]').forEach(function (a) {
+        links[a.getAttribute("href").slice(1)] = a;
+    });
+
+    const sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+    if (sections.length === 0) return;
+
+    let current = null;
+    let ticking = false;
+
+    function update() {
+        ticking = false;
+        const line = 120; // just below the floating header
+        let owner = null;
+
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i].getBoundingClientRect().top > line) break;
+            if (links[sections[i].id]) owner = links[sections[i].id];
+        }
+
+        // at the very bottom, the last section wins even if it is short
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+            const last = sections[sections.length - 1];
+            if (links[last.id]) owner = links[last.id];
+        }
+
+        if (owner === current) return;
+        if (current) current.classList.remove("is-active");
+        if (owner) owner.classList.add("is-active");
+        current = owner;
+    }
+
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(update);
+        }
+    }, { passive: true });
+
+    update();
+});
+
+
+/* ============================================================
    EXPANDABLE PROJECT DESCRIPTIONS
    ============================================================ */
 
